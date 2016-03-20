@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0EE898C61C9EE57000FC0F96 /* Authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE898C41C9EE57000FC0F96 /* Authorization.h */; };
+		0EE898C71C9EE57000FC0F96 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE898C51C9EE57000FC0F96 /* Authorization.m */; };
 		9AD10D5B1C96B14C00DD7555 /* AutoLinQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10DE51C96B1BF00DD7555 /* AFHTTPSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D651C96B1BE00DD7555 /* AFHTTPSessionManager.h */; };
 		9AD10DE61C96B1BF00DD7555 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D661C96B1BE00DD7555 /* AFHTTPSessionManager.m */; };
@@ -140,17 +142,19 @@
 		9AD10E5A1C96B1BF00DD7555 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE21C96B1BF00DD7555 /* Utilities.m */; };
 		9AD10E5B1C96B1BF00DD7555 /* WireFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10DE31C96B1BF00DD7555 /* WireFormat.h */; };
 		9AD10E5C1C96B1BF00DD7555 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE41C96B1BF00DD7555 /* WireFormat.m */; };
-		9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E671C96BF5000DD7555 /* MQTTClient.h */; };
+		9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E671C96BF5000DD7555 /* MQTTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E6B1C96BF5000DD7555 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E681C96BF5000DD7555 /* MQTTClient.m */; };
 		9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E761C96D7B800DD7555 /* ContiMessage.pb.h */; };
 		9AD10E791C96D7B800DD7555 /* ContiMessage.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E771C96D7B800DD7555 /* ContiMessage.pb.m */; };
-		9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7A1C96D7EF00DD7555 /* ProtoBufManager.h */; };
+		9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7A1C96D7EF00DD7555 /* ProtoBufManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E7D1C96D7EF00DD7555 /* ProtoBufManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7B1C96D7EF00DD7555 /* ProtoBufManager.m */; };
-		9AD10E801C96E6CC00DD7555 /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7E1C96E6CC00DD7555 /* HttpClient.h */; };
+		9AD10E801C96E6CC00DD7555 /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7E1C96E6CC00DD7555 /* HttpClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E811C96E6CC00DD7555 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7F1C96E6CC00DD7555 /* HttpClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EE898C41C9EE57000FC0F96 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
+		0EE898C51C9EE57000FC0F96 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLinQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLinQ.h; sourceTree = "<group>"; };
 		9AD10D5C1C96B14C00DD7555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -293,6 +297,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EE898C31C9EE55800FC0F96 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				0EE898C41C9EE57000FC0F96 /* Authorization.h */,
+				0EE898C51C9EE57000FC0F96 /* Authorization.m */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		9AD10D4D1C96B14C00DD7555 = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +549,7 @@
 		9AD10E641C96BF5000DD7555 /* comti */ = {
 			isa = PBXGroup;
 			children = (
+				0EE898C31C9EE55800FC0F96 /* Authorization */,
 				9AD10E651C96BF5000DD7555 /* https */,
 				9AD10E661C96BF5000DD7555 /* mqtt */,
 				9AD10E691C96BF5000DD7555 /* protocolBuffer */,
@@ -588,13 +602,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AD10DF41C96B1BF00DD7555 /* AFAutoPurgingImageCache.h in Headers */,
+				9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */,
+				9AD10E801C96E6CC00DD7555 /* HttpClient.h in Headers */,
+				9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */,
+				0EE898C61C9EE57000FC0F96 /* Authorization.h in Headers */,
 				9AD10E591C96B1BF00DD7555 /* Utilities.h in Headers */,
 				9AD10DFE1C96B1BF00DD7555 /* UIImage+AFNetworking.h in Headers */,
 				9AD10E091C96B1BF00DD7555 /* dummypthread.h in Headers */,
 				9AD10E551C96B1BF00DD7555 /* UnknownFieldSet.h in Headers */,
 				9AD10DEC1C96B1BF00DD7555 /* AFURLRequestSerialization.h in Headers */,
 				9AD10E251C96B1BF00DD7555 /* will_mosq.h in Headers */,
-				9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */,
 				9AD10E231C96B1BF00DD7555 /* util_mosq.h in Headers */,
 				9AD10DF61C96B1BF00DD7555 /* AFImageDownloader.h in Headers */,
 				9AD10E081C96B1BF00DD7555 /* config.h in Headers */,
@@ -628,7 +645,6 @@
 				9AD10E011C96B1BF00DD7555 /* UIKit+AFNetworking.h in Headers */,
 				9AD10E4C1C96B1BF00DD7555 /* ObjectivecDescriptor.pb.h in Headers */,
 				9AD10E211C96B1BF00DD7555 /* tls_mosq.h in Headers */,
-				9AD10E801C96E6CC00DD7555 /* HttpClient.h in Headers */,
 				9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */,
 				9AD10DF01C96B1BF00DD7555 /* AFURLSessionManager.h in Headers */,
 				9AD10DEE1C96B1BF00DD7555 /* AFURLResponseSerialization.h in Headers */,
@@ -637,7 +653,6 @@
 				9AD10E531C96B1BF00DD7555 /* TextFormat.h in Headers */,
 				9AD10E021C96B1BF00DD7555 /* UIProgressView+AFNetworking.h in Headers */,
 				9AD10DFC1C96B1BF00DD7555 /* UIButton+AFNetworking.h in Headers */,
-				9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */,
 				9AD10E421C96B1BF00DD7555 /* GeneratedMessage.h in Headers */,
 				9AD10E151C96B1BF00DD7555 /* net_mosq.h in Headers */,
 				9AD10E0B1C96B1BF00DD7555 /* logging_mosq.h in Headers */,
@@ -756,6 +771,7 @@
 				9AD10E7D1C96D7EF00DD7555 /* ProtoBufManager.m in Sources */,
 				9AD10E191C96B1BF00DD7555 /* read_handle_shared.c in Sources */,
 				9AD10E101C96B1BF00DD7555 /* mosquitto.c in Sources */,
+				0EE898C71C9EE57000FC0F96 /* Authorization.m in Sources */,
 				9AD10E331C96B1BF00DD7555 /* CodedOutputStream.m in Sources */,
 				9AD10E0A1C96B1BF00DD7555 /* logging_mosq.c in Sources */,
 				9AD10E811C96E6CC00DD7555 /* HttpClient.m in Sources */,
@@ -910,8 +926,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.conti.AutoLinQ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutk.KalayCam.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "92c3189c-e01d-4cf3-8f50-9058b95ef31b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -929,8 +946,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.conti.AutoLinQ;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutk.KalayCam.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a21a4715-397c-4127-825f-2dfa6c608963";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -978,6 +996,7 @@
 				9AD10EFE1C97A6E200DD7555 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
