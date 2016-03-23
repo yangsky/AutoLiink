@@ -14,8 +14,12 @@
 
 @property (nonatomic,strong) NSString *userPassword;    //password
 
-//get user Authorization Token
-
--(NSString *)getAuthenticationToken;
+/**
+ *  Get user Authorization Token
+ *
+ *  @param baseurlString  The URL string used to create the request URL.
+ *
+*/
+-(NSString *)getAuthenticationTokenWithUrl:(NSString *)baseurlString;
 
 @end

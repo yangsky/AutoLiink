@@ -14,7 +14,7 @@
 @implementation Authorization
 
 
-// MARK: getter
+// MARK: getter userEmail or userPassword
 -(NSString *)userEmail
 {
     return [[NSUserDefaults standardUserDefaults]objectForKey:@"USEREMAIL"];
@@ -26,9 +26,9 @@
 
 // MARK:USER API Method
 
--(NSString *)getAuthenticationToken
+-(NSString *)getAuthenticationTokenWithUrl:(NSString *)baseurlString;
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@/token-auth/",BASEURL];
+    NSString *urlString = [NSString stringWithFormat:@"%@/token-auth/",baseurlString];
     NSURL *url = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSDictionary *params = @{@"email": self.userEmail, @"password": self.userPassword};
