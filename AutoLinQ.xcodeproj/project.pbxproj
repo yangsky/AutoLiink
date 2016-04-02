@@ -21,6 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0E0405B71CAFB13600F9715F /* EncryptionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B21CAFB13600F9715F /* EncryptionMethod.h */; };
+		0E0405B81CAFB13600F9715F /* EncryptionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0405B31CAFB13600F9715F /* EncryptionMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E0405B91CAFB13600F9715F /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B41CAFB13600F9715F /* GTMBase64.h */; };
+		0E0405BA1CAFB13600F9715F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0405B51CAFB13600F9715F /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0E0405BB1CAFB13600F9715F /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B61CAFB13600F9715F /* GTMDefines.h */; };
 		0E61F40A1CA2BE2B0016857A /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F3FD1CA2BE2B0016857A /* Common.h */; };
 		0E61F40B1CA2BE2B0016857A /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F3FF1CA2BE2B0016857A /* crypt.h */; };
 		0E61F40C1CA2BE2B0016857A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4001CA2BE2B0016857A /* ioapi.c */; };
@@ -187,6 +192,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0405B21CAFB13600F9715F /* EncryptionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionMethod.h; sourceTree = "<group>"; };
+		0E0405B31CAFB13600F9715F /* EncryptionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionMethod.m; sourceTree = "<group>"; };
+		0E0405B41CAFB13600F9715F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
+		0E0405B51CAFB13600F9715F /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
+		0E0405B61CAFB13600F9715F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		0E61F3FD1CA2BE2B0016857A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		0E61F3FF1CA2BE2B0016857A /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		0E61F4001CA2BE2B0016857A /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
@@ -366,6 +376,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E0405B11CAFB0F700F9715F /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				0E0405B21CAFB13600F9715F /* EncryptionMethod.h */,
+				0E0405B31CAFB13600F9715F /* EncryptionMethod.m */,
+				0E0405B41CAFB13600F9715F /* GTMBase64.h */,
+				0E0405B51CAFB13600F9715F /* GTMBase64.m */,
+				0E0405B61CAFB13600F9715F /* GTMDefines.h */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
 		0E61F3FC1CA2BE2B0016857A /* SSZipArchive */ = {
 			isa = PBXGroup;
 			children = (
@@ -675,6 +697,7 @@
 		9AD10E641C96BF5000DD7555 /* comti */ = {
 			isa = PBXGroup;
 			children = (
+				0E0405B11CAFB0F700F9715F /* Encryption */,
 				0E61F3FC1CA2BE2B0016857A /* SSZipArchive */,
 				0EE898C31C9EE55800FC0F96 /* Authorization */,
 				9AD10E651C96BF5000DD7555 /* https */,
@@ -760,6 +783,7 @@
 				9AD10E4A1C96B1BF00DD7555 /* MutableField.h in Headers */,
 				9AD10E511C96B1BF00DD7555 /* RingBuffer.h in Headers */,
 				0E61F4321CA2BE530016857A /* aestab.h in Headers */,
+				0E0405B71CAFB13600F9715F /* EncryptionMethod.h in Headers */,
 				9AD10E571C96B1BF00DD7555 /* UnknownFieldSetBuilder.h in Headers */,
 				9AD10E5B1C96B1BF00DD7555 /* WireFormat.h in Headers */,
 				9AD10E341C96B1BF00DD7555 /* ConcreteExtensionField.h in Headers */,
@@ -787,6 +811,7 @@
 				9AD10E211C96B1BF00DD7555 /* tls_mosq.h in Headers */,
 				9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */,
 				9AD10DF01C96B1BF00DD7555 /* AFURLSessionManager.h in Headers */,
+				0E0405BB1CAFB13600F9715F /* GTMDefines.h in Headers */,
 				9AD10DEE1C96B1BF00DD7555 /* AFURLResponseSerialization.h in Headers */,
 				9AD10E061C96B1BF00DD7555 /* UIWebView+AFNetworking.h in Headers */,
 				0E61F40B1CA2BE2B0016857A /* crypt.h in Headers */,
@@ -813,6 +838,7 @@
 				9AD10E461C96B1BF00DD7555 /* Message.h in Headers */,
 				9AD10E471C96B1BF00DD7555 /* MessageBuilder.h in Headers */,
 				0E61F4131CA2BE2B0016857A /* zip.h in Headers */,
+				0E0405B91CAFB13600F9715F /* GTMBase64.h in Headers */,
 				9AD10E171C96B1BF00DD7555 /* read_handle.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -945,8 +971,10 @@
 				9AD10DEB1C96B1BF00DD7555 /* AFSecurityPolicy.m in Sources */,
 				0E61F40E1CA2BE2B0016857A /* mztools.c in Sources */,
 				9AD10E4F1C96B1BF00DD7555 /* PBArray.m in Sources */,
+				0E0405BA1CAFB13600F9715F /* GTMBase64.m in Sources */,
 				9AD10DFD1C96B1BF00DD7555 /* UIButton+AFNetworking.m in Sources */,
 				9AD10E561C96B1BF00DD7555 /* UnknownFieldSet.m in Sources */,
+				0E0405B81CAFB13600F9715F /* EncryptionMethod.m in Sources */,
 				9AD10DF71C96B1BF00DD7555 /* AFImageDownloader.m in Sources */,
 				9AD10E1B1C96B1BF00DD7555 /* send_mosq.c in Sources */,
 				0E61F4101CA2BE2B0016857A /* unzip.c in Sources */,
