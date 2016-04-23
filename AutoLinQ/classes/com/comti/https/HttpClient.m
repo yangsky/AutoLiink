@@ -32,7 +32,7 @@
     }
     
     // POST
-    [manager POST:urlString parameters:parameters progress:nil success:responseHandler failure:failureHandler];
+    [manager POST:urlString parameters:parameters success:responseHandler failure:failureHandler];
 }
 
 /**
