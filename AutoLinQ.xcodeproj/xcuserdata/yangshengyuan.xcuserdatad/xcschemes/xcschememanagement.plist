@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>AutoLinQ_lib.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>build.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>9AD10EFB1C97A6E200DD7555</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC0BB4C51CCB888100EB7394</key>
 		<dict>
 			<key>primary</key>
 			<true/>

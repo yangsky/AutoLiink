@@ -242,6 +242,31 @@
 		EC0BB4BE1CCB315D00EB7394 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB4971CCB315D00EB7394 /* UIWebView+AFNetworking.h */; };
 		EC0BB4BF1CCB315D00EB7394 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4981CCB315D00EB7394 /* UIWebView+AFNetworking.m */; };
 		EC0BB4C11CCB32C300EB7394 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */; };
+		EC0BB4C91CCB888100EB7394 /* AutoLinQ_lib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC0BB4C81CCB888100EB7394 /* AutoLinQ_lib.h */; };
+		EC0BB4CB1CCB888100EB7394 /* AutoLinQ_lib.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4CA1CCB888100EB7394 /* AutoLinQ_lib.m */; };
+		EC0BB4CF1CCB891700EB7394 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
+		EC0BB4D01CCB892100EB7394 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
+		EC0BB4D11CCB892100EB7394 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
+		EC0BB4D21CCB892400EB7394 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
+		EC0BB4D31CCB892900EB7394 /* Des.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD18F1CCB2F13009B8F64 /* Des.m */; };
+		EC0BB4D41CCB892900EB7394 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
+		EC0BB4D51CCB892D00EB7394 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
+		EC0BB4D61CCB893000EB7394 /* ZipUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1801CCB2E95009B8F64 /* ZipUtil.m */; };
+		EC0BB4D71CCB893400EB7394 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7F1C96E6CC00DD7555 /* HttpClient.m */; };
+		EC0BB4D81CCB893800EB7394 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E681C96BF5000DD7555 /* MQTTClient.m */; };
+		EC0BB4D91CCB893C00EB7394 /* ProtoBufManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7B1C96D7EF00DD7555 /* ProtoBufManager.m */; };
+		EC0BB4DA1CCB894100EB7394 /* ContiMessage.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E771C96D7B800DD7555 /* ContiMessage.pb.m */; };
+		EC0BB4DC1CCB89AF00EB7394 /* AutoLinQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4DD1CCB89AF00EB7394 /* QiniuUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB36D1CCB301A00EB7394 /* QiniuUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4DE1CCB89AF00EB7394 /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB35F1CCB2FFF00EB7394 /* Message.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4DF1CCB89AF00EB7394 /* Payload.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3611CCB2FFF00EB7394 /* Payload.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E01CCB89AF00EB7394 /* Des.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD18E1CCB2F13009B8F64 /* Des.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E11CCB89AF00EB7394 /* Hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1901CCB2F13009B8F64 /* Hmac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E21CCB89AF00EB7394 /* ZipUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD17F1CCB2E95009B8F64 /* ZipUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E31CCB89AF00EB7394 /* HttpClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7E1C96E6CC00DD7555 /* HttpClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E41CCB89AF00EB7394 /* MQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E671C96BF5000DD7555 /* MQTTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E51CCB89AF00EB7394 /* ProtoBufManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7A1C96D7EF00DD7555 /* ProtoBufManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC0BB4E61CCB89C800EB7394 /* ContiMessage.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E761C96D7B800DD7555 /* ContiMessage.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD17F1CCB2E95009B8F64 /* ZipUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8AD1821CCB2E95009B8F64 /* ZipUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1801CCB2E95009B8F64 /* ZipUtil.m */; };
 		EC8AD1891CCB2EBA009B8F64 /* GZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1851CCB2EBA009B8F64 /* GZIP.h */; };
@@ -255,6 +280,19 @@
 		EC8AD1991CCB2F13009B8F64 /* StringUitl.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1931CCB2F13009B8F64 /* StringUitl.h */; };
 		EC8AD19A1CCB2F13009B8F64 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC0BB4C41CCB888100EB7394 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EC0BB4C91CCB888100EB7394 /* AutoLinQ_lib.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E61F4411CA2BEF50016857A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -480,6 +518,9 @@
 		EC0BB4971CCB315D00EB7394 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		EC0BB4981CCB315D00EB7394 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
 		EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		EC0BB4C61CCB888100EB7394 /* libAutoLinQ_lib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAutoLinQ_lib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC0BB4C81CCB888100EB7394 /* AutoLinQ_lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLinQ_lib.h; sourceTree = "<group>"; };
+		EC0BB4CA1CCB888100EB7394 /* AutoLinQ_lib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoLinQ_lib.m; sourceTree = "<group>"; };
 		EC8AD17F1CCB2E95009B8F64 /* ZipUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipUtil.h; sourceTree = "<group>"; };
 		EC8AD1801CCB2E95009B8F64 /* ZipUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZipUtil.m; sourceTree = "<group>"; };
 		EC8AD1851CCB2EBA009B8F64 /* GZIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GZIP.h; sourceTree = "<group>"; };
@@ -504,6 +545,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC0BB4C31CCB888100EB7394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -513,6 +561,7 @@
 				EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */,
 				0E61F4411CA2BEF50016857A /* libz.tbd */,
 				9AD10D591C96B14C00DD7555 /* AutoLinQ */,
+				EC0BB4C71CCB888100EB7394 /* AutoLinQ_lib */,
 				9AD10D581C96B14C00DD7555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -521,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */,
+				EC0BB4C61CCB888100EB7394 /* libAutoLinQ_lib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1019,6 +1069,15 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		EC0BB4C71CCB888100EB7394 /* AutoLinQ_lib */ = {
+			isa = PBXGroup;
+			children = (
+				EC0BB4C81CCB888100EB7394 /* AutoLinQ_lib.h */,
+				EC0BB4CA1CCB888100EB7394 /* AutoLinQ_lib.m */,
+			);
+			path = AutoLinQ_lib;
+			sourceTree = "<group>";
+		};
 		EC8AD17E1CCB2E95009B8F64 /* compress */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1256,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC0BB4DB1CCB898300EB7394 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0BB4DC1CCB89AF00EB7394 /* AutoLinQ.h in Headers */,
+				EC0BB4DD1CCB89AF00EB7394 /* QiniuUtil.h in Headers */,
+				EC0BB4DE1CCB89AF00EB7394 /* Message.h in Headers */,
+				EC0BB4DF1CCB89AF00EB7394 /* Payload.h in Headers */,
+				EC0BB4E01CCB89AF00EB7394 /* Des.h in Headers */,
+				EC0BB4E11CCB89AF00EB7394 /* Hmac.h in Headers */,
+				EC0BB4E21CCB89AF00EB7394 /* ZipUtil.h in Headers */,
+				EC0BB4E31CCB89AF00EB7394 /* HttpClient.h in Headers */,
+				EC0BB4E41CCB89AF00EB7394 /* MQTTClient.h in Headers */,
+				EC0BB4E51CCB89AF00EB7394 /* ProtoBufManager.h in Headers */,
+				EC0BB4E61CCB89C800EB7394 /* ContiMessage.pb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -1218,6 +1295,24 @@
 			productReference = 9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EC0BB4C51CCB888100EB7394 /* AutoLinQ_lib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC0BB4CC1CCB888100EB7394 /* Build configuration list for PBXNativeTarget "AutoLinQ_lib" */;
+			buildPhases = (
+				EC0BB4C21CCB888100EB7394 /* Sources */,
+				EC0BB4C31CCB888100EB7394 /* Frameworks */,
+				EC0BB4C41CCB888100EB7394 /* CopyFiles */,
+				EC0BB4DB1CCB898300EB7394 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLinQ_lib;
+			productName = AutoLinQ_lib;
+			productReference = EC0BB4C61CCB888100EB7394 /* libAutoLinQ_lib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1231,6 +1326,9 @@
 						DevelopmentTeam = CHX656NT89;
 					};
 					9AD10EFB1C97A6E200DD7555 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					EC0BB4C51CCB888100EB7394 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
 				};
@@ -1249,6 +1347,7 @@
 			targets = (
 				9AD10D561C96B14C00DD7555 /* AutoLinQ */,
 				9AD10EFB1C97A6E200DD7555 /* build */,
+				EC0BB4C51CCB888100EB7394 /* AutoLinQ_lib */,
 			);
 		};
 /* End PBXProject section */
@@ -1399,6 +1498,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC0BB4C21CCB888100EB7394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC0BB4D31CCB892900EB7394 /* Des.m in Sources */,
+				EC0BB4D81CCB893800EB7394 /* MQTTClient.m in Sources */,
+				EC0BB4CF1CCB891700EB7394 /* QiniuUtil.m in Sources */,
+				EC0BB4D71CCB893400EB7394 /* HttpClient.m in Sources */,
+				EC0BB4DA1CCB894100EB7394 /* ContiMessage.pb.m in Sources */,
+				EC0BB4D91CCB893C00EB7394 /* ProtoBufManager.m in Sources */,
+				EC0BB4D01CCB892100EB7394 /* Message.m in Sources */,
+				EC0BB4D21CCB892400EB7394 /* IndexGenerator.m in Sources */,
+				EC0BB4D51CCB892D00EB7394 /* StringUitl.m in Sources */,
+				EC0BB4D61CCB893000EB7394 /* ZipUtil.m in Sources */,
+				EC0BB4D41CCB892900EB7394 /* Hmac.m in Sources */,
+				EC0BB4D11CCB892100EB7394 /* Payload.m in Sources */,
+				EC0BB4CB1CCB888100EB7394 /* AutoLinQ_lib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
@@ -1544,6 +1663,26 @@
 			};
 			name = Release;
 		};
+		EC0BB4CD1CCB888100EB7394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EC0BB4CE1CCB888100EB7394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1573,6 +1712,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EC0BB4CC1CCB888100EB7394 /* Build configuration list for PBXNativeTarget "AutoLinQ_lib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC0BB4CD1CCB888100EB7394 /* Debug */,
+				EC0BB4CE1CCB888100EB7394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
