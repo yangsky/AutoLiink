@@ -21,47 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0E0405B71CAFB13600F9715F /* EncryptionMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B21CAFB13600F9715F /* EncryptionMethod.h */; };
-		0E0405B81CAFB13600F9715F /* EncryptionMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0405B31CAFB13600F9715F /* EncryptionMethod.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0E0405B91CAFB13600F9715F /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B41CAFB13600F9715F /* GTMBase64.h */; };
-		0E0405BA1CAFB13600F9715F /* GTMBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0405B51CAFB13600F9715F /* GTMBase64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0E0405BB1CAFB13600F9715F /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E0405B61CAFB13600F9715F /* GTMDefines.h */; };
-		0E61F40A1CA2BE2B0016857A /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F3FD1CA2BE2B0016857A /* Common.h */; };
-		0E61F40B1CA2BE2B0016857A /* crypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F3FF1CA2BE2B0016857A /* crypt.h */; };
-		0E61F40C1CA2BE2B0016857A /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4001CA2BE2B0016857A /* ioapi.c */; };
-		0E61F40D1CA2BE2B0016857A /* ioapi.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4011CA2BE2B0016857A /* ioapi.h */; };
-		0E61F40E1CA2BE2B0016857A /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4021CA2BE2B0016857A /* mztools.c */; };
-		0E61F40F1CA2BE2B0016857A /* mztools.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4031CA2BE2B0016857A /* mztools.h */; };
-		0E61F4101CA2BE2B0016857A /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4041CA2BE2B0016857A /* unzip.c */; };
-		0E61F4111CA2BE2B0016857A /* unzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4051CA2BE2B0016857A /* unzip.h */; };
-		0E61F4121CA2BE2B0016857A /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4061CA2BE2B0016857A /* zip.c */; };
-		0E61F4131CA2BE2B0016857A /* zip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4071CA2BE2B0016857A /* zip.h */; };
-		0E61F4141CA2BE2B0016857A /* SSZipArchive.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4081CA2BE2B0016857A /* SSZipArchive.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E61F4151CA2BE2B0016857A /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4091CA2BE2B0016857A /* SSZipArchive.m */; };
-		0E61F42C1CA2BE530016857A /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4171CA2BE530016857A /* aes.h */; };
-		0E61F42D1CA2BE530016857A /* aes_via_ace.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4181CA2BE530016857A /* aes_via_ace.h */; };
-		0E61F42E1CA2BE530016857A /* aescrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4191CA2BE530016857A /* aescrypt.c */; };
-		0E61F42F1CA2BE530016857A /* aeskey.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F41A1CA2BE530016857A /* aeskey.c */; };
-		0E61F4301CA2BE530016857A /* aesopt.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F41B1CA2BE530016857A /* aesopt.h */; };
-		0E61F4311CA2BE530016857A /* aestab.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F41C1CA2BE530016857A /* aestab.c */; };
-		0E61F4321CA2BE530016857A /* aestab.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F41D1CA2BE530016857A /* aestab.h */; };
-		0E61F4331CA2BE530016857A /* brg_endian.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F41E1CA2BE530016857A /* brg_endian.h */; };
-		0E61F4341CA2BE530016857A /* brg_types.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F41F1CA2BE530016857A /* brg_types.h */; };
-		0E61F4351CA2BE530016857A /* entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4201CA2BE530016857A /* entropy.c */; };
-		0E61F4361CA2BE530016857A /* entropy.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4211CA2BE530016857A /* entropy.h */; };
-		0E61F4371CA2BE530016857A /* fileenc.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4221CA2BE530016857A /* fileenc.c */; };
-		0E61F4381CA2BE530016857A /* fileenc.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4231CA2BE530016857A /* fileenc.h */; };
-		0E61F4391CA2BE530016857A /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4241CA2BE530016857A /* hmac.c */; };
-		0E61F43A1CA2BE530016857A /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4251CA2BE530016857A /* hmac.h */; };
-		0E61F43B1CA2BE530016857A /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4261CA2BE530016857A /* prng.c */; };
-		0E61F43C1CA2BE530016857A /* prng.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4271CA2BE530016857A /* prng.h */; };
-		0E61F43D1CA2BE530016857A /* pwd2key.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F4281CA2BE530016857A /* pwd2key.c */; };
-		0E61F43E1CA2BE530016857A /* pwd2key.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F4291CA2BE530016857A /* pwd2key.h */; };
-		0E61F43F1CA2BE530016857A /* sha1.c in Sources */ = {isa = PBXBuildFile; fileRef = 0E61F42A1CA2BE530016857A /* sha1.c */; };
-		0E61F4401CA2BE530016857A /* sha1.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E61F42B1CA2BE530016857A /* sha1.h */; };
 		0E61F4421CA2BEF50016857A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E61F4411CA2BEF50016857A /* libz.tbd */; };
-		0EE898C61C9EE57000FC0F96 /* Authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EE898C41C9EE57000FC0F96 /* Authorization.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0EE898C71C9EE57000FC0F96 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE898C51C9EE57000FC0F96 /* Authorization.m */; };
 		9AD10D5B1C96B14C00DD7555 /* AutoLinQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E081C96B1BF00DD7555 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D8B1C96B1BF00DD7555 /* config.h */; };
 		9AD10E091C96B1BF00DD7555 /* dummypthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D8C1C96B1BF00DD7555 /* dummypthread.h */; };
@@ -148,7 +108,7 @@
 		9AD10E5C1C96B1BF00DD7555 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE41C96B1BF00DD7555 /* WireFormat.m */; };
 		9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E671C96BF5000DD7555 /* MQTTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E6B1C96BF5000DD7555 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E681C96BF5000DD7555 /* MQTTClient.m */; };
-		9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E761C96D7B800DD7555 /* ContiMessage.pb.h */; };
+		9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E761C96D7B800DD7555 /* ContiMessage.pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E791C96D7B800DD7555 /* ContiMessage.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E771C96D7B800DD7555 /* ContiMessage.pb.m */; };
 		9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10E7A1C96D7EF00DD7555 /* ProtoBufManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E7D1C96D7EF00DD7555 /* ProtoBufManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7B1C96D7EF00DD7555 /* ProtoBufManager.m */; };
@@ -156,11 +116,11 @@
 		9AD10E811C96E6CC00DD7555 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7F1C96E6CC00DD7555 /* HttpClient.m */; };
 		EC0BB3661CCB2FFF00EB7394 /* Message.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB35F1CCB2FFF00EB7394 /* Message.h */; };
 		EC0BB3671CCB2FFF00EB7394 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
-		EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3611CCB2FFF00EB7394 /* Payload.h */; };
+		EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3611CCB2FFF00EB7394 /* Payload.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC0BB3691CCB2FFF00EB7394 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
 		EC0BB36A1CCB2FFF00EB7394 /* IndexGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3641CCB2FFF00EB7394 /* IndexGenerator.h */; };
 		EC0BB36B1CCB2FFF00EB7394 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
-		EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB36D1CCB301A00EB7394 /* QiniuUtil.h */; };
+		EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB36D1CCB301A00EB7394 /* QiniuUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC0BB3701CCB301A00EB7394 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
 		EC0BB3AE1CCB303500EB7394 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EC0BB3721CCB303500EB7394 /* LICENSE */; };
 		EC0BB3AF1CCB303500EB7394 /* GTM_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3751CCB303500EB7394 /* GTM_Base64.h */; };
@@ -282,62 +242,22 @@
 		EC0BB4BE1CCB315D00EB7394 /* UIWebView+AFNetworking.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB4971CCB315D00EB7394 /* UIWebView+AFNetworking.h */; };
 		EC0BB4BF1CCB315D00EB7394 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4981CCB315D00EB7394 /* UIWebView+AFNetworking.m */; };
 		EC0BB4C11CCB32C300EB7394 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */; };
-		EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD17F1CCB2E95009B8F64 /* ZipUtil.h */; };
+		EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD17F1CCB2E95009B8F64 /* ZipUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8AD1821CCB2E95009B8F64 /* ZipUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1801CCB2E95009B8F64 /* ZipUtil.m */; };
 		EC8AD1891CCB2EBA009B8F64 /* GZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1851CCB2EBA009B8F64 /* GZIP.h */; };
 		EC8AD18A1CCB2EBA009B8F64 /* GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1861CCB2EBA009B8F64 /* GZIP.m */; };
 		EC8AD18B1CCB2EBA009B8F64 /* LICENCE.md in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1871CCB2EBA009B8F64 /* LICENCE.md */; };
 		EC8AD18C1CCB2EBA009B8F64 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1881CCB2EBA009B8F64 /* README.md */; };
-		EC8AD1951CCB2F13009B8F64 /* Des.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD18E1CCB2F13009B8F64 /* Des.h */; };
+		EC8AD1951CCB2F13009B8F64 /* Des.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD18E1CCB2F13009B8F64 /* Des.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8AD1961CCB2F13009B8F64 /* Des.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD18F1CCB2F13009B8F64 /* Des.m */; };
-		EC8AD1971CCB2F13009B8F64 /* Hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1901CCB2F13009B8F64 /* Hmac.h */; };
+		EC8AD1971CCB2F13009B8F64 /* Hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1901CCB2F13009B8F64 /* Hmac.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC8AD1981CCB2F13009B8F64 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
 		EC8AD1991CCB2F13009B8F64 /* StringUitl.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1931CCB2F13009B8F64 /* StringUitl.h */; };
 		EC8AD19A1CCB2F13009B8F64 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E0405B21CAFB13600F9715F /* EncryptionMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionMethod.h; sourceTree = "<group>"; };
-		0E0405B31CAFB13600F9715F /* EncryptionMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionMethod.m; sourceTree = "<group>"; };
-		0E0405B41CAFB13600F9715F /* GTMBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMBase64.h; sourceTree = "<group>"; };
-		0E0405B51CAFB13600F9715F /* GTMBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMBase64.m; sourceTree = "<group>"; };
-		0E0405B61CAFB13600F9715F /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		0E61F3FD1CA2BE2B0016857A /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		0E61F3FF1CA2BE2B0016857A /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
-		0E61F4001CA2BE2B0016857A /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
-		0E61F4011CA2BE2B0016857A /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
-		0E61F4021CA2BE2B0016857A /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
-		0E61F4031CA2BE2B0016857A /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
-		0E61F4041CA2BE2B0016857A /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
-		0E61F4051CA2BE2B0016857A /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
-		0E61F4061CA2BE2B0016857A /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
-		0E61F4071CA2BE2B0016857A /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
-		0E61F4081CA2BE2B0016857A /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
-		0E61F4091CA2BE2B0016857A /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
-		0E61F4171CA2BE530016857A /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
-		0E61F4181CA2BE530016857A /* aes_via_ace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes_via_ace.h; sourceTree = "<group>"; };
-		0E61F4191CA2BE530016857A /* aescrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aescrypt.c; sourceTree = "<group>"; };
-		0E61F41A1CA2BE530016857A /* aeskey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aeskey.c; sourceTree = "<group>"; };
-		0E61F41B1CA2BE530016857A /* aesopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aesopt.h; sourceTree = "<group>"; };
-		0E61F41C1CA2BE530016857A /* aestab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aestab.c; sourceTree = "<group>"; };
-		0E61F41D1CA2BE530016857A /* aestab.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aestab.h; sourceTree = "<group>"; };
-		0E61F41E1CA2BE530016857A /* brg_endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_endian.h; sourceTree = "<group>"; };
-		0E61F41F1CA2BE530016857A /* brg_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = brg_types.h; sourceTree = "<group>"; };
-		0E61F4201CA2BE530016857A /* entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = entropy.c; sourceTree = "<group>"; };
-		0E61F4211CA2BE530016857A /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
-		0E61F4221CA2BE530016857A /* fileenc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fileenc.c; sourceTree = "<group>"; };
-		0E61F4231CA2BE530016857A /* fileenc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileenc.h; sourceTree = "<group>"; };
-		0E61F4241CA2BE530016857A /* hmac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = hmac.c; sourceTree = "<group>"; };
-		0E61F4251CA2BE530016857A /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
-		0E61F4261CA2BE530016857A /* prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = prng.c; sourceTree = "<group>"; };
-		0E61F4271CA2BE530016857A /* prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prng.h; sourceTree = "<group>"; };
-		0E61F4281CA2BE530016857A /* pwd2key.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pwd2key.c; sourceTree = "<group>"; };
-		0E61F4291CA2BE530016857A /* pwd2key.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pwd2key.h; sourceTree = "<group>"; };
-		0E61F42A1CA2BE530016857A /* sha1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sha1.c; sourceTree = "<group>"; };
-		0E61F42B1CA2BE530016857A /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
 		0E61F4411CA2BEF50016857A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		0EE898C41C9EE57000FC0F96 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
-		0EE898C51C9EE57000FC0F96 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLinQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLinQ.h; sourceTree = "<group>"; };
 		9AD10D5C1C96B14C00DD7555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -587,83 +507,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E0405B11CAFB0F700F9715F /* Encryption */ = {
-			isa = PBXGroup;
-			children = (
-				0E0405B21CAFB13600F9715F /* EncryptionMethod.h */,
-				0E0405B31CAFB13600F9715F /* EncryptionMethod.m */,
-				0E0405B41CAFB13600F9715F /* GTMBase64.h */,
-				0E0405B51CAFB13600F9715F /* GTMBase64.m */,
-				0E0405B61CAFB13600F9715F /* GTMDefines.h */,
-			);
-			path = Encryption;
-			sourceTree = "<group>";
-		};
-		0E61F3FC1CA2BE2B0016857A /* SSZipArchive */ = {
-			isa = PBXGroup;
-			children = (
-				0E61F4161CA2BE530016857A /* aes */,
-				0E61F3FD1CA2BE2B0016857A /* Common.h */,
-				0E61F3FE1CA2BE2B0016857A /* minizip */,
-				0E61F4081CA2BE2B0016857A /* SSZipArchive.h */,
-				0E61F4091CA2BE2B0016857A /* SSZipArchive.m */,
-			);
-			path = SSZipArchive;
-			sourceTree = "<group>";
-		};
-		0E61F3FE1CA2BE2B0016857A /* minizip */ = {
-			isa = PBXGroup;
-			children = (
-				0E61F3FF1CA2BE2B0016857A /* crypt.h */,
-				0E61F4001CA2BE2B0016857A /* ioapi.c */,
-				0E61F4011CA2BE2B0016857A /* ioapi.h */,
-				0E61F4021CA2BE2B0016857A /* mztools.c */,
-				0E61F4031CA2BE2B0016857A /* mztools.h */,
-				0E61F4041CA2BE2B0016857A /* unzip.c */,
-				0E61F4051CA2BE2B0016857A /* unzip.h */,
-				0E61F4061CA2BE2B0016857A /* zip.c */,
-				0E61F4071CA2BE2B0016857A /* zip.h */,
-			);
-			path = minizip;
-			sourceTree = "<group>";
-		};
-		0E61F4161CA2BE530016857A /* aes */ = {
-			isa = PBXGroup;
-			children = (
-				0E61F4171CA2BE530016857A /* aes.h */,
-				0E61F4181CA2BE530016857A /* aes_via_ace.h */,
-				0E61F4191CA2BE530016857A /* aescrypt.c */,
-				0E61F41A1CA2BE530016857A /* aeskey.c */,
-				0E61F41B1CA2BE530016857A /* aesopt.h */,
-				0E61F41C1CA2BE530016857A /* aestab.c */,
-				0E61F41D1CA2BE530016857A /* aestab.h */,
-				0E61F41E1CA2BE530016857A /* brg_endian.h */,
-				0E61F41F1CA2BE530016857A /* brg_types.h */,
-				0E61F4201CA2BE530016857A /* entropy.c */,
-				0E61F4211CA2BE530016857A /* entropy.h */,
-				0E61F4221CA2BE530016857A /* fileenc.c */,
-				0E61F4231CA2BE530016857A /* fileenc.h */,
-				0E61F4241CA2BE530016857A /* hmac.c */,
-				0E61F4251CA2BE530016857A /* hmac.h */,
-				0E61F4261CA2BE530016857A /* prng.c */,
-				0E61F4271CA2BE530016857A /* prng.h */,
-				0E61F4281CA2BE530016857A /* pwd2key.c */,
-				0E61F4291CA2BE530016857A /* pwd2key.h */,
-				0E61F42A1CA2BE530016857A /* sha1.c */,
-				0E61F42B1CA2BE530016857A /* sha1.h */,
-			);
-			path = aes;
-			sourceTree = "<group>";
-		};
-		0EE898C31C9EE55800FC0F96 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				0EE898C41C9EE57000FC0F96 /* Authorization.h */,
-				0EE898C51C9EE57000FC0F96 /* Authorization.m */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
 		9AD10D4D1C96B14C00DD7555 = {
 			isa = PBXGroup;
 			children = (
@@ -858,9 +701,6 @@
 				EC0BB35E1CCB2FFF00EB7394 /* common */,
 				EC8AD18D1CCB2F13009B8F64 /* encrypt */,
 				EC8AD17E1CCB2E95009B8F64 /* compress */,
-				0E0405B11CAFB0F700F9715F /* Encryption */,
-				0E61F3FC1CA2BE2B0016857A /* SSZipArchive */,
-				0EE898C31C9EE55800FC0F96 /* Authorization */,
 				9AD10E651C96BF5000DD7555 /* https */,
 				9AD10E661C96BF5000DD7555 /* mqtt */,
 				9AD10E691C96BF5000DD7555 /* protocolBuffer */,
@@ -1237,23 +1077,23 @@
 			files = (
 				EC0BB4AA1CCB315D00EB7394 /* AFURLSessionManager.h in Headers */,
 				EC0BB4B41CCB315D00EB7394 /* UIButton+AFNetworking.h in Headers */,
-				0E61F4341CA2BE530016857A /* brg_types.h in Headers */,
-				0E61F43E1CA2BE530016857A /* pwd2key.h in Headers */,
 				EC0BB40C1CCB30AA00EB7394 /* QNResolverDelegate.h in Headers */,
 				EC0BB3B31CCB303500EB7394 /* QNAsyncRun.h in Headers */,
+				EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */,
+				EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */,
+				EC8AD1971CCB2F13009B8F64 /* Hmac.h in Headers */,
+				9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */,
+				EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */,
+				EC8AD1951CCB2F13009B8F64 /* Des.h in Headers */,
 				9AD10E6A1C96BF5000DD7555 /* MQTTClient.h in Headers */,
 				EC0BB4B61CCB315D00EB7394 /* UIImage+AFNetworking.h in Headers */,
 				EC0BB49B1CCB315D00EB7394 /* AFHTTPRequestOperationManager.h in Headers */,
 				9AD10E801C96E6CC00DD7555 /* HttpClient.h in Headers */,
-				0E61F4141CA2BE2B0016857A /* SSZipArchive.h in Headers */,
-				0EE898C61C9EE57000FC0F96 /* Authorization.h in Headers */,
 				EC0BB4B71CCB315D00EB7394 /* UIImageView+AFNetworking.h in Headers */,
 				EC0BB41A1CCB30AA00EB7394 /* QNHex.h in Headers */,
 				EC0BB3D01CCB303500EB7394 /* QiniuSDK.h in Headers */,
 				9AD10E7C1C96D7EF00DD7555 /* ProtoBufManager.h in Headers */,
 				EC0BB3D51CCB303500EB7394 /* QNRecorderDelegate.h in Headers */,
-				0E61F4301CA2BE530016857A /* aesopt.h in Headers */,
-				EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */,
 				EC0BB4BE1CCB315D00EB7394 /* UIWebView+AFNetworking.h in Headers */,
 				EC0BB4AE1CCB315D00EB7394 /* AFNetworkActivityIndicatorManager.h in Headers */,
 				9AD10E591C96B1BF00DD7555 /* Utilities.h in Headers */,
@@ -1263,7 +1103,6 @@
 				9AD10E551C96B1BF00DD7555 /* UnknownFieldSet.h in Headers */,
 				EC0BB3DF1CCB303500EB7394 /* QNUploadOption.h in Headers */,
 				EC0BB3C21CCB303500EB7394 /* QNVersion.h in Headers */,
-				EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */,
 				9AD10E251C96B1BF00DD7555 /* will_mosq.h in Headers */,
 				9AD10E231C96B1BF00DD7555 /* util_mosq.h in Headers */,
 				EC0BB4B01CCB315D00EB7394 /* UIActivityIndicatorView+AFNetworking.h in Headers */,
@@ -1273,7 +1112,6 @@
 				EC0BB4A01CCB315D00EB7394 /* AFNetworkReachabilityManager.h in Headers */,
 				9AD10E3A1C96B1BF00DD7555 /* ExtendableMessageBuilder.h in Headers */,
 				EC0BB3BB1CCB303500EB7394 /* QNFileDelegate.h in Headers */,
-				0E61F4401CA2BE530016857A /* sha1.h in Headers */,
 				9AD10E111C96B1BF00DD7555 /* mosquitto.h in Headers */,
 				9AD10E301C96B1BF00DD7555 /* CodedInputStream.h in Headers */,
 				9AD10E1F1C96B1BF00DD7555 /* time_mosq.h in Headers */,
@@ -1282,7 +1120,6 @@
 				EC0BB49F1CCB315D00EB7394 /* AFNetworking.h in Headers */,
 				EC8AD1991CCB2F13009B8F64 /* StringUitl.h in Headers */,
 				9AD10E131C96B1BF00DD7555 /* mqtt3_protocol.h in Headers */,
-				0E61F43A1CA2BE530016857A /* hmac.h in Headers */,
 				9AD10E121C96B1BF00DD7555 /* mosquitto_internal.h in Headers */,
 				EC0BB4061CCB30AA00EB7394 /* QNDomain.h in Headers */,
 				9AD10E3F1C96B1BF00DD7555 /* Field.h in Headers */,
@@ -1291,9 +1128,6 @@
 				9AD10E511C96B1BF00DD7555 /* RingBuffer.h in Headers */,
 				EC0BB3E11CCB303500EB7394 /* QNUpToken.h in Headers */,
 				EC0BB3B51CCB303500EB7394 /* QNCrc32.h in Headers */,
-				EC8AD1971CCB2F13009B8F64 /* Hmac.h in Headers */,
-				0E61F4321CA2BE530016857A /* aestab.h in Headers */,
-				0E0405B71CAFB13600F9715F /* EncryptionMethod.h in Headers */,
 				EC0BB4A61CCB315D00EB7394 /* AFURLRequestSerialization.h in Headers */,
 				EC0BB4BA1CCB315D00EB7394 /* UIProgressView+AFNetworking.h in Headers */,
 				EC0BB3B11CCB303500EB7394 /* QNALAssetFile.h in Headers */,
@@ -1307,46 +1141,33 @@
 				9AD10E341C96B1BF00DD7555 /* ConcreteExtensionField.h in Headers */,
 				EC0BB4B91CCB315D00EB7394 /* UIKit+AFNetworking.h in Headers */,
 				9AD10E2B1C96B1BF00DD7555 /* AbstractMessage.h in Headers */,
-				0E61F4361CA2BE530016857A /* entropy.h in Headers */,
 				EC8AD1891CCB2EBA009B8F64 /* GZIP.h in Headers */,
 				EC0BB3C51CCB303500EB7394 /* QNHttpDelegate.h in Headers */,
 				9AD10E3D1C96B1BF00DD7555 /* ExtensionRegistry.h in Headers */,
 				EC0BB4101CCB30AA00EB7394 /* QNDnspodFree.h in Headers */,
-				0E61F42C1CA2BE530016857A /* aes.h in Headers */,
 				EC0BB3CC1CCB303500EB7394 /* QNStats.h in Headers */,
 				EC0BB3661CCB2FFF00EB7394 /* Message.h in Headers */,
 				9AD10E361C96B1BF00DD7555 /* Descriptor.pb.h in Headers */,
-				0E61F43C1CA2BE530016857A /* prng.h in Headers */,
 				9AD10E381C96B1BF00DD7555 /* ExtendableMessage.h in Headers */,
 				EC0BB3C31CCB303500EB7394 /* QNDns.h in Headers */,
-				0E61F4331CA2BE530016857A /* brg_endian.h in Headers */,
 				EC0BB3C81CCB303500EB7394 /* QNResponseInfo.h in Headers */,
-				0E61F42D1CA2BE530016857A /* aes_via_ace.h in Headers */,
-				0E61F4381CA2BE530016857A /* fileenc.h in Headers */,
 				9AD10E0F1C96B1BF00DD7555 /* messages_mosq.h in Headers */,
 				9AD10E3C1C96B1BF00DD7555 /* ExtensionField.h in Headers */,
 				9AD10E2D1C96B1BF00DD7555 /* AbstractMessageBuilder.h in Headers */,
 				9AD10E4C1C96B1BF00DD7555 /* ObjectivecDescriptor.pb.h in Headers */,
 				9AD10E211C96B1BF00DD7555 /* tls_mosq.h in Headers */,
-				9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */,
-				0E0405BB1CAFB13600F9715F /* GTMDefines.h in Headers */,
 				EC0BB3BE1CCB303500EB7394 /* QNSystem.h in Headers */,
 				EC0BB4081CCB30AA00EB7394 /* QNNetworkInfo.h in Headers */,
 				EC0BB4141CCB30AA00EB7394 /* QNHosts.h in Headers */,
-				0E61F40B1CA2BE2B0016857A /* crypt.h in Headers */,
 				EC0BB4BC1CCB315D00EB7394 /* UIRefreshControl+AFNetworking.h in Headers */,
-				0E61F40D1CA2BE2B0016857A /* ioapi.h in Headers */,
 				9AD10E2F1C96B1BF00DD7555 /* Bootstrap.h in Headers */,
 				EC0BB3D61CCB303500EB7394 /* QNConfiguration.h in Headers */,
 				EC0BB3AF1CCB303500EB7394 /* GTM_Base64.h in Headers */,
-				EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */,
 				EC0BB40D1CCB30AA00EB7394 /* HappyDNS.h in Headers */,
 				EC0BB40A1CCB30AA00EB7394 /* QNRecord.h in Headers */,
 				EC0BB3C01CCB303500EB7394 /* QNUrlSafeBase64.h in Headers */,
-				0E61F4111CA2BE2B0016857A /* unzip.h in Headers */,
 				EC0BB3CE1CCB303500EB7394 /* QNUserAgent.h in Headers */,
 				9AD10E531C96B1BF00DD7555 /* TextFormat.h in Headers */,
-				EC8AD1951CCB2F13009B8F64 /* Des.h in Headers */,
 				EC0BB3BC1CCB303500EB7394 /* QNPHAssetFile.h in Headers */,
 				9AD10E421C96B1BF00DD7555 /* GeneratedMessage.h in Headers */,
 				9AD10E151C96B1BF00DD7555 /* net_mosq.h in Headers */,
@@ -1357,7 +1178,6 @@
 				EC0BB3DA1CCB303500EB7394 /* QNResumeUpload.h in Headers */,
 				9AD10D5B1C96B14C00DD7555 /* AutoLinQ.h in Headers */,
 				9AD10E441C96B1BF00DD7555 /* GeneratedMessageBuilder.h in Headers */,
-				0E61F40A1CA2BE2B0016857A /* Common.h in Headers */,
 				9AD10E481C96B1BF00DD7555 /* MutableExtensionRegistry.h in Headers */,
 				EC0BB4121CCB30AA00EB7394 /* QNHijackingDetectWrapper.h in Headers */,
 				EC0BB4A81CCB315D00EB7394 /* AFURLResponseSerialization.h in Headers */,
@@ -1367,14 +1187,11 @@
 				EC0BB40E1CCB30AA00EB7394 /* QNDnspodEnterprise.h in Headers */,
 				9AD10E0D1C96B1BF00DD7555 /* memory_mosq.h in Headers */,
 				EC0BB4991CCB315D00EB7394 /* AFHTTPRequestOperation.h in Headers */,
-				0E61F40F1CA2BE2B0016857A /* mztools.h in Headers */,
 				EC0BB4A21CCB315D00EB7394 /* AFSecurityPolicy.h in Headers */,
 				9AD10E461C96B1BF00DD7555 /* Message.h in Headers */,
 				EC0BB3D81CCB303500EB7394 /* QNFormUpload.h in Headers */,
 				9AD10E471C96B1BF00DD7555 /* MessageBuilder.h in Headers */,
-				0E61F4131CA2BE2B0016857A /* zip.h in Headers */,
 				EC0BB3B91CCB303500EB7394 /* QNFile.h in Headers */,
-				0E0405B91CAFB13600F9715F /* GTMBase64.h in Headers */,
 				EC0BB3DC1CCB303500EB7394 /* QNUploadManager.h in Headers */,
 				9AD10E171C96B1BF00DD7555 /* read_handle.h in Headers */,
 			);
@@ -1478,7 +1295,6 @@
 				9AD10E6B1C96BF5000DD7555 /* MQTTClient.m in Sources */,
 				EC0BB4AB1CCB315D00EB7394 /* AFURLSessionManager.m in Sources */,
 				9AD10E401C96B1BF00DD7555 /* Field.m in Sources */,
-				0E61F42E1CA2BE530016857A /* aescrypt.c in Sources */,
 				EC0BB3B61CCB303500EB7394 /* QNCrc32.m in Sources */,
 				9AD10E451C96B1BF00DD7555 /* GeneratedMessageBuilder.m in Sources */,
 				EC0BB4111CCB30AA00EB7394 /* QNDnspodFree.m in Sources */,
@@ -1493,17 +1309,13 @@
 				EC8AD18B1CCB2EBA009B8F64 /* LICENCE.md in Sources */,
 				EC0BB3E21CCB303500EB7394 /* QNUpToken.m in Sources */,
 				EC0BB3DD1CCB303500EB7394 /* QNUploadManager.m in Sources */,
-				0E61F43F1CA2BE530016857A /* sha1.c in Sources */,
 				9AD10E2E1C96B1BF00DD7555 /* AbstractMessageBuilder.m in Sources */,
 				EC0BB4B31CCB315D00EB7394 /* UIAlertView+AFNetworking.m in Sources */,
 				9AD10E7D1C96D7EF00DD7555 /* ProtoBufManager.m in Sources */,
-				0E61F43D1CA2BE530016857A /* pwd2key.c in Sources */,
-				0E61F4121CA2BE2B0016857A /* zip.c in Sources */,
 				EC0BB3D21CCB303500EB7394 /* QNReachability.m in Sources */,
 				EC0BB49E1CCB315D00EB7394 /* AFHTTPSessionManager.m in Sources */,
 				EC0BB4A31CCB315D00EB7394 /* AFSecurityPolicy.m in Sources */,
 				EC8AD18A1CCB2EBA009B8F64 /* GZIP.m in Sources */,
-				0E61F4351CA2BE530016857A /* entropy.c in Sources */,
 				EC0BB3BD1CCB303500EB7394 /* QNPHAssetFile.m in Sources */,
 				EC0BB3D41CCB303500EB7394 /* QNFileRecorder.m in Sources */,
 				EC8AD1981CCB2F13009B8F64 /* Hmac.m in Sources */,
@@ -1511,13 +1323,10 @@
 				EC8AD1821CCB2E95009B8F64 /* ZipUtil.m in Sources */,
 				9AD10E101C96B1BF00DD7555 /* mosquitto.c in Sources */,
 				EC0BB3BF1CCB303500EB7394 /* QNSystem.m in Sources */,
-				0E61F4391CA2BE530016857A /* hmac.c in Sources */,
-				0EE898C71C9EE57000FC0F96 /* Authorization.m in Sources */,
 				9AD10E331C96B1BF00DD7555 /* CodedOutputStream.m in Sources */,
 				EC0BB41D1CCB30AA00EB7394 /* README.md in Sources */,
 				EC8AD18C1CCB2EBA009B8F64 /* README.md in Sources */,
 				9AD10E0A1C96B1BF00DD7555 /* logging_mosq.c in Sources */,
-				0E61F40C1CA2BE2B0016857A /* ioapi.c in Sources */,
 				9AD10E811C96E6CC00DD7555 /* HttpClient.m in Sources */,
 				9AD10E0C1C96B1BF00DD7555 /* memory_mosq.c in Sources */,
 				9AD10E371C96B1BF00DD7555 /* Descriptor.pb.m in Sources */,
@@ -1527,7 +1336,6 @@
 				EC0BB4151CCB30AA00EB7394 /* QNHosts.m in Sources */,
 				9AD10E291C96B1BF00DD7555 /* README.md in Sources */,
 				9AD10E1A1C96B1BF00DD7555 /* send_client_mosq.c in Sources */,
-				0E61F4311CA2BE530016857A /* aestab.c in Sources */,
 				9AD10E3E1C96B1BF00DD7555 /* ExtensionRegistry.m in Sources */,
 				9AD10E141C96B1BF00DD7555 /* net_mosq.c in Sources */,
 				9AD10E221C96B1BF00DD7555 /* util_mosq.c in Sources */,
@@ -1537,7 +1345,6 @@
 				EC0BB41B1CCB30AA00EB7394 /* QNHex.m in Sources */,
 				EC0BB3B01CCB303500EB7394 /* GTM_Base64.m in Sources */,
 				EC0BB4131CCB30AA00EB7394 /* QNHijackingDetectWrapper.m in Sources */,
-				0E61F40E1CA2BE2B0016857A /* mztools.c in Sources */,
 				EC0BB3D71CCB303500EB7394 /* QNConfiguration.m in Sources */,
 				9AD10E4F1C96B1BF00DD7555 /* PBArray.m in Sources */,
 				EC0BB4B81CCB315D00EB7394 /* UIImageView+AFNetworking.m in Sources */,
@@ -1545,18 +1352,14 @@
 				EC0BB4AD1CCB315D00EB7394 /* README.md in Sources */,
 				EC0BB36B1CCB2FFF00EB7394 /* IndexGenerator.m in Sources */,
 				EC0BB4A71CCB315D00EB7394 /* AFURLRequestSerialization.m in Sources */,
-				0E0405BA1CAFB13600F9715F /* GTMBase64.m in Sources */,
 				9AD10E561C96B1BF00DD7555 /* UnknownFieldSet.m in Sources */,
-				0E0405B81CAFB13600F9715F /* EncryptionMethod.m in Sources */,
 				EC0BB3E31CCB303500EB7394 /* README.md in Sources */,
 				9AD10E1B1C96B1BF00DD7555 /* send_mosq.c in Sources */,
 				EC0BB40B1CCB30AA00EB7394 /* QNRecord.m in Sources */,
-				0E61F4101CA2BE2B0016857A /* unzip.c in Sources */,
 				9AD10E2C1C96B1BF00DD7555 /* AbstractMessage.m in Sources */,
 				EC0BB3701CCB301A00EB7394 /* QiniuUtil.m in Sources */,
 				9AD10E181C96B1BF00DD7555 /* read_handle_client.c in Sources */,
 				9AD10E521C96B1BF00DD7555 /* RingBuffer.m in Sources */,
-				0E61F4151CA2BE2B0016857A /* SSZipArchive.m in Sources */,
 				EC0BB4BD1CCB315D00EB7394 /* UIRefreshControl+AFNetworking.m in Sources */,
 				EC0BB3E01CCB303500EB7394 /* QNUploadOption.m in Sources */,
 				EC0BB3C11CCB303500EB7394 /* QNUrlSafeBase64.m in Sources */,
@@ -1566,11 +1369,9 @@
 				EC8AD1961CCB2F13009B8F64 /* Des.m in Sources */,
 				9AD10E5A1C96B1BF00DD7555 /* Utilities.m in Sources */,
 				9AD10E201C96B1BF00DD7555 /* tls_mosq.c in Sources */,
-				0E61F43B1CA2BE530016857A /* prng.c in Sources */,
 				EC0BB40F1CCB30AA00EB7394 /* QNDnspodEnterprise.m in Sources */,
 				EC0BB4BF1CCB315D00EB7394 /* UIWebView+AFNetworking.m in Sources */,
 				9AD10E311C96B1BF00DD7555 /* CodedInputStream.m in Sources */,
-				0E61F42F1CA2BE530016857A /* aeskey.c in Sources */,
 				EC0BB3CF1CCB303500EB7394 /* QNUserAgent.m in Sources */,
 				EC0BB4B11CCB315D00EB7394 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				EC0BB4BB1CCB315D00EB7394 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1593,7 +1394,6 @@
 				EC0BB4B51CCB315D00EB7394 /* UIButton+AFNetworking.m in Sources */,
 				9AD10E491C96B1BF00DD7555 /* MutableExtensionRegistry.m in Sources */,
 				9AD10E1D1C96B1BF00DD7555 /* thread_mosq.c in Sources */,
-				0E61F4371CA2BE530016857A /* fileenc.c in Sources */,
 				9AD10E0E1C96B1BF00DD7555 /* messages_mosq.c in Sources */,
 				EC0BB4A91CCB315D00EB7394 /* AFURLResponseSerialization.m in Sources */,
 			);
