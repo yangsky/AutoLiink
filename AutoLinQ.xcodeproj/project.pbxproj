@@ -279,6 +279,122 @@
 		EC8AD1981CCB2F13009B8F64 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
 		EC8AD1991CCB2F13009B8F64 /* StringUitl.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1931CCB2F13009B8F64 /* StringUitl.h */; };
 		EC8AD19A1CCB2F13009B8F64 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
+		ECE2CDC31CCE4CDC0080E624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC21CCE4CDC0080E624 /* main.m */; };
+		ECE2CDC61CCE4CDC0080E624 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC51CCE4CDC0080E624 /* AppDelegate.m */; };
+		ECE2CDC91CCE4CDC0080E624 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC81CCE4CDC0080E624 /* ViewController.m */; };
+		ECE2CDCC1CCE4CDC0080E624 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE2CDCA1CCE4CDC0080E624 /* Main.storyboard */; };
+		ECE2CDCE1CCE4CDC0080E624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECE2CDCD1CCE4CDC0080E624 /* Assets.xcassets */; };
+		ECE2CDD11CCE4CDC0080E624 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECE2CDCF1CCE4CDC0080E624 /* LaunchScreen.storyboard */; };
+		ECE2CDD61CCE4CFF0080E624 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
+		ECE2CDD71CCE4CFF0080E624 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
+		ECE2CDD81CCE4CFF0080E624 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
+		ECE2CDD91CCE4CFF0080E624 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
+		ECE2CDDA1CCE4CFF0080E624 /* Des.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD18F1CCB2F13009B8F64 /* Des.m */; };
+		ECE2CDDB1CCE4CFF0080E624 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
+		ECE2CDDC1CCE4CFF0080E624 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
+		ECE2CDDD1CCE4CFF0080E624 /* ZipUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1801CCB2E95009B8F64 /* ZipUtil.m */; };
+		ECE2CDDE1CCE4CFF0080E624 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7F1C96E6CC00DD7555 /* HttpClient.m */; };
+		ECE2CDDF1CCE4CFF0080E624 /* MQTTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E681C96BF5000DD7555 /* MQTTClient.m */; };
+		ECE2CDE01CCE4CFF0080E624 /* ContiMessage.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E771C96D7B800DD7555 /* ContiMessage.pb.m */; };
+		ECE2CDE11CCE4CFF0080E624 /* ProtoBufManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10E7B1C96D7EF00DD7555 /* ProtoBufManager.m */; };
+		ECE2CDE21CCE4DA50080E624 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4721CCB315D00EB7394 /* AFHTTPRequestOperation.m */; };
+		ECE2CDE31CCE4DA50080E624 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4741CCB315D00EB7394 /* AFHTTPRequestOperationManager.m */; };
+		ECE2CDE41CCE4DA50080E624 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4761CCB315D00EB7394 /* AFHTTPSessionManager.m */; };
+		ECE2CDE51CCE4DA50080E624 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4791CCB315D00EB7394 /* AFNetworkReachabilityManager.m */; };
+		ECE2CDE61CCE4DA50080E624 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB47B1CCB315D00EB7394 /* AFSecurityPolicy.m */; };
+		ECE2CDE71CCE4DA50080E624 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB47D1CCB315D00EB7394 /* AFURLConnectionOperation.m */; };
+		ECE2CDE81CCE4DA50080E624 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB47F1CCB315D00EB7394 /* AFURLRequestSerialization.m */; };
+		ECE2CDE91CCE4DA50080E624 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4811CCB315D00EB7394 /* AFURLResponseSerialization.m */; };
+		ECE2CDEA1CCE4DA50080E624 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4831CCB315D00EB7394 /* AFURLSessionManager.m */; };
+		ECE2CDEB1CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4851CCB315D00EB7394 /* README.md */; };
+		ECE2CDEC1CCE4DA50080E624 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4881CCB315D00EB7394 /* AFNetworkActivityIndicatorManager.m */; };
+		ECE2CDED1CCE4DA50080E624 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB48A1CCB315D00EB7394 /* UIActivityIndicatorView+AFNetworking.m */; };
+		ECE2CDEE1CCE4DA50080E624 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB48C1CCB315D00EB7394 /* UIAlertView+AFNetworking.m */; };
+		ECE2CDEF1CCE4DA50080E624 /* UIButton+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB48E1CCB315D00EB7394 /* UIButton+AFNetworking.m */; };
+		ECE2CDF01CCE4DA50080E624 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4911CCB315D00EB7394 /* UIImageView+AFNetworking.m */; };
+		ECE2CDF11CCE4DA50080E624 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4941CCB315D00EB7394 /* UIProgressView+AFNetworking.m */; };
+		ECE2CDF21CCE4DA50080E624 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4961CCB315D00EB7394 /* UIRefreshControl+AFNetworking.m */; };
+		ECE2CDF31CCE4DA50080E624 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4981CCB315D00EB7394 /* UIWebView+AFNetworking.m */; };
+		ECE2CDF41CCE4DA50080E624 /* QNDnsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3E81CCB30AA00EB7394 /* QNDnsManager.m */; };
+		ECE2CDF51CCE4DA50080E624 /* QNDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3EA1CCB30AA00EB7394 /* QNDomain.m */; };
+		ECE2CDF61CCE4DA50080E624 /* QNNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3EC1CCB30AA00EB7394 /* QNNetworkInfo.m */; };
+		ECE2CDF71CCE4DA50080E624 /* QNRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3EE1CCB30AA00EB7394 /* QNRecord.m */; };
+		ECE2CDF81CCE4DA50080E624 /* QNDnspodEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3F31CCB30AA00EB7394 /* QNDnspodEnterprise.m */; };
+		ECE2CDF91CCE4DA50080E624 /* QNDnspodFree.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3F51CCB30AA00EB7394 /* QNDnspodFree.m */; };
+		ECE2CDFA1CCE4DA50080E624 /* QNHijackingDetectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3F81CCB30AA00EB7394 /* QNHijackingDetectWrapper.m */; };
+		ECE2CDFB1CCE4DA50080E624 /* QNHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3FA1CCB30AA00EB7394 /* QNHosts.m */; };
+		ECE2CDFC1CCE4DA50080E624 /* QNResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3FC1CCB30AA00EB7394 /* QNResolver.m */; };
+		ECE2CDFD1CCE4DA50080E624 /* QNDes.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3FF1CCB30AA00EB7394 /* QNDes.m */; };
+		ECE2CDFE1CCE4DA50080E624 /* QNHex.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4011CCB30AA00EB7394 /* QNHex.m */; };
+		ECE2CDFF1CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB4031CCB30AA00EB7394 /* README.md */; };
+		ECE2CE001CCE4DA50080E624 /* GTM_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3761CCB303500EB7394 /* GTM_Base64.m */; };
+		ECE2CE011CCE4DA50080E624 /* QNALAssetFile.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3781CCB303500EB7394 /* QNALAssetFile.m */; };
+		ECE2CE021CCE4DA50080E624 /* QNAsyncRun.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB37A1CCB303500EB7394 /* QNAsyncRun.m */; };
+		ECE2CE031CCE4DA50080E624 /* QNCrc32.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB37C1CCB303500EB7394 /* QNCrc32.m */; };
+		ECE2CE041CCE4DA50080E624 /* QNEtag.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB37E1CCB303500EB7394 /* QNEtag.m */; };
+		ECE2CE051CCE4DA50080E624 /* QNFile.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3801CCB303500EB7394 /* QNFile.m */; };
+		ECE2CE061CCE4DA50080E624 /* QNPHAssetFile.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3831CCB303500EB7394 /* QNPHAssetFile.m */; };
+		ECE2CE071CCE4DA50080E624 /* QNSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3851CCB303500EB7394 /* QNSystem.m */; };
+		ECE2CE081CCE4DA50080E624 /* QNUrlSafeBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3871CCB303500EB7394 /* QNUrlSafeBase64.m */; };
+		ECE2CE091CCE4DA50080E624 /* QNDns.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB38B1CCB303500EB7394 /* QNDns.m */; };
+		ECE2CE0A1CCE4DA50080E624 /* QNHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB38E1CCB303500EB7394 /* QNHttpManager.m */; };
+		ECE2CE0B1CCE4DA50080E624 /* QNResponseInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3901CCB303500EB7394 /* QNResponseInfo.m */; };
+		ECE2CE0C1CCE4DA50080E624 /* QNSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3921CCB303500EB7394 /* QNSessionManager.m */; };
+		ECE2CE0D1CCE4DA50080E624 /* QNStats.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3941CCB303500EB7394 /* QNStats.m */; };
+		ECE2CE0E1CCE4DA50080E624 /* QNUserAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3961CCB303500EB7394 /* QNUserAgent.m */; };
+		ECE2CE0F1CCE4DA50080E624 /* QNReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB39A1CCB303500EB7394 /* QNReachability.m */; };
+		ECE2CE101CCE4DA50080E624 /* QNFileRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB39D1CCB303500EB7394 /* QNFileRecorder.m */; };
+		ECE2CE111CCE4DA50080E624 /* QNConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3A11CCB303500EB7394 /* QNConfiguration.m */; };
+		ECE2CE121CCE4DA50080E624 /* QNFormUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3A31CCB303500EB7394 /* QNFormUpload.m */; };
+		ECE2CE131CCE4DA50080E624 /* QNResumeUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3A51CCB303500EB7394 /* QNResumeUpload.m */; };
+		ECE2CE141CCE4DA50080E624 /* QNUploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3A71CCB303500EB7394 /* QNUploadManager.m */; };
+		ECE2CE151CCE4DA50080E624 /* QNUploadOption.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3AA1CCB303500EB7394 /* QNUploadOption.m */; };
+		ECE2CE161CCE4DA50080E624 /* QNUpToken.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3AC1CCB303500EB7394 /* QNUpToken.m */; };
+		ECE2CE171CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3AD1CCB303500EB7394 /* README.md */; };
+		ECE2CE181CCE4DA50080E624 /* GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1861CCB2EBA009B8F64 /* GZIP.m */; };
+		ECE2CE191CCE4DA50080E624 /* LICENCE.md in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1871CCB2EBA009B8F64 /* LICENCE.md */; };
+		ECE2CE1A1CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1881CCB2EBA009B8F64 /* README.md */; };
+		ECE2CE1B1CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DAD1C96B1BF00DD7555 /* README.md */; };
+		ECE2CE1C1CCE4DA50080E624 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DAF1C96B1BF00DD7555 /* README.md */; };
+		ECE2CE1D1CCE4DA50080E624 /* AbstractMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DB41C96B1BF00DD7555 /* AbstractMessage.m */; };
+		ECE2CE1E1CCE4DA50080E624 /* AbstractMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DB61C96B1BF00DD7555 /* AbstractMessageBuilder.m */; };
+		ECE2CE1F1CCE4DA50080E624 /* CodedInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DB91C96B1BF00DD7555 /* CodedInputStream.m */; };
+		ECE2CE201CCE4DA50080E624 /* CodedOutputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DBB1C96B1BF00DD7555 /* CodedOutputStream.m */; };
+		ECE2CE211CCE4DA50080E624 /* ConcreteExtensionField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DBD1C96B1BF00DD7555 /* ConcreteExtensionField.m */; };
+		ECE2CE221CCE4DA50080E624 /* Descriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DBF1C96B1BF00DD7555 /* Descriptor.pb.m */; };
+		ECE2CE231CCE4DA50080E624 /* ExtendableMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DC11C96B1BF00DD7555 /* ExtendableMessage.m */; };
+		ECE2CE241CCE4DA50080E624 /* ExtendableMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DC31C96B1BF00DD7555 /* ExtendableMessageBuilder.m */; };
+		ECE2CE251CCE4DA50080E624 /* ExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DC61C96B1BF00DD7555 /* ExtensionRegistry.m */; };
+		ECE2CE261CCE4DA50080E624 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DC81C96B1BF00DD7555 /* Field.m */; };
+		ECE2CE271CCE4DA50080E624 /* GeneratedMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DCB1C96B1BF00DD7555 /* GeneratedMessage.m */; };
+		ECE2CE281CCE4DA50080E624 /* GeneratedMessageBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DCD1C96B1BF00DD7555 /* GeneratedMessageBuilder.m */; };
+		ECE2CE291CCE4DA50080E624 /* MutableExtensionRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DD11C96B1BF00DD7555 /* MutableExtensionRegistry.m */; };
+		ECE2CE2A1CCE4DA50080E624 /* MutableField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DD31C96B1BF00DD7555 /* MutableField.m */; };
+		ECE2CE2B1CCE4DA50080E624 /* ObjectivecDescriptor.pb.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DD51C96B1BF00DD7555 /* ObjectivecDescriptor.pb.m */; };
+		ECE2CE2C1CCE4DA50080E624 /* PBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DD71C96B1BF00DD7555 /* PBArray.m */; };
+		ECE2CE2D1CCE4DA50080E624 /* RingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DDA1C96B1BF00DD7555 /* RingBuffer.m */; };
+		ECE2CE2E1CCE4DA50080E624 /* TextFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DDC1C96B1BF00DD7555 /* TextFormat.m */; };
+		ECE2CE2F1CCE4DA50080E624 /* UnknownFieldSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DDE1C96B1BF00DD7555 /* UnknownFieldSet.m */; };
+		ECE2CE301CCE4DA50080E624 /* UnknownFieldSetBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE01C96B1BF00DD7555 /* UnknownFieldSetBuilder.m */; };
+		ECE2CE311CCE4DA50080E624 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE21C96B1BF00DD7555 /* Utilities.m */; };
+		ECE2CE321CCE4DA50080E624 /* WireFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DE41C96B1BF00DD7555 /* WireFormat.m */; };
+		ECE2CE331CCE4E010080E624 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E61F4411CA2BEF50016857A /* libz.tbd */; };
+		ECE2CE361CCE4E150080E624 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */; };
+		ECE2CE371CCE4EF00080E624 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D8D1C96B1BF00DD7555 /* logging_mosq.c */; };
+		ECE2CE381CCE4EF00080E624 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D8F1C96B1BF00DD7555 /* memory_mosq.c */; };
+		ECE2CE391CCE4EF00080E624 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D911C96B1BF00DD7555 /* messages_mosq.c */; };
+		ECE2CE3A1CCE4EF00080E624 /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D931C96B1BF00DD7555 /* mosquitto.c */; };
+		ECE2CE3B1CCE4EF00080E624 /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D971C96B1BF00DD7555 /* net_mosq.c */; };
+		ECE2CE3C1CCE4EF00080E624 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D991C96B1BF00DD7555 /* read_handle.c */; };
+		ECE2CE3D1CCE4EF00080E624 /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D9B1C96B1BF00DD7555 /* read_handle_client.c */; };
+		ECE2CE3E1CCE4EF00080E624 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D9C1C96B1BF00DD7555 /* read_handle_shared.c */; };
+		ECE2CE3F1CCE4EF00080E624 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D9D1C96B1BF00DD7555 /* send_client_mosq.c */; };
+		ECE2CE401CCE4EF00080E624 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10D9E1C96B1BF00DD7555 /* send_mosq.c */; };
+		ECE2CE411CCE4EF00080E624 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DA01C96B1BF00DD7555 /* thread_mosq.c */; };
+		ECE2CE421CCE4EF00080E624 /* time_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DA11C96B1BF00DD7555 /* time_mosq.c */; };
+		ECE2CE431CCE4EF00080E624 /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DA31C96B1BF00DD7555 /* tls_mosq.c */; };
+		ECE2CE441CCE4EF00080E624 /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DA51C96B1BF00DD7555 /* util_mosq.c */; };
+		ECE2CE451CCE4EF00080E624 /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 9AD10DA71C96B1BF00DD7555 /* will_mosq.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -533,6 +649,17 @@
 		EC8AD1911CCB2F13009B8F64 /* Hmac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hmac.m; sourceTree = "<group>"; };
 		EC8AD1931CCB2F13009B8F64 /* StringUitl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUitl.h; sourceTree = "<group>"; };
 		EC8AD1941CCB2F13009B8F64 /* StringUitl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUitl.m; sourceTree = "<group>"; };
+		ECE2CDBF1CCE4CDC0080E624 /* AutoLinQClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLinQClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECE2CDC21CCE4CDC0080E624 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECE2CDC41CCE4CDC0080E624 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ECE2CDC51CCE4CDC0080E624 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECE2CDC71CCE4CDC0080E624 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ECE2CDC81CCE4CDC0080E624 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ECE2CDCB1CCE4CDC0080E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECE2CDCD1CCE4CDC0080E624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECE2CDD01CCE4CDC0080E624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECE2CDD21CCE4CDC0080E624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECE2CE341CCE4E0A0080E624 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,16 +679,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE2CDBC1CCE4CDC0080E624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE2CE361CCE4E150080E624 /* libresolv.9.tbd in Frameworks */,
+				ECE2CE331CCE4E010080E624 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9AD10D4D1C96B14C00DD7555 = {
 			isa = PBXGroup;
 			children = (
+				ECE2CE341CCE4E0A0080E624 /* libresolv.tbd */,
 				EC0BB4C01CCB32C300EB7394 /* libresolv.9.tbd */,
 				0E61F4411CA2BEF50016857A /* libz.tbd */,
 				9AD10D591C96B14C00DD7555 /* AutoLinQ */,
 				EC0BB4C71CCB888100EB7394 /* AutoLinQ_lib */,
+				ECE2CDC01CCE4CDC0080E624 /* AutoLinQClient */,
 				9AD10D581C96B14C00DD7555 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -571,6 +709,7 @@
 			children = (
 				9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */,
 				EC0BB4C61CCB888100EB7394 /* libAutoLinQ_lib.a */,
+				ECE2CDBF1CCE4CDC0080E624 /* AutoLinQClient.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1127,6 +1266,30 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		ECE2CDC01CCE4CDC0080E624 /* AutoLinQClient */ = {
+			isa = PBXGroup;
+			children = (
+				ECE2CDC41CCE4CDC0080E624 /* AppDelegate.h */,
+				ECE2CDC51CCE4CDC0080E624 /* AppDelegate.m */,
+				ECE2CDC71CCE4CDC0080E624 /* ViewController.h */,
+				ECE2CDC81CCE4CDC0080E624 /* ViewController.m */,
+				ECE2CDCA1CCE4CDC0080E624 /* Main.storyboard */,
+				ECE2CDCD1CCE4CDC0080E624 /* Assets.xcassets */,
+				ECE2CDCF1CCE4CDC0080E624 /* LaunchScreen.storyboard */,
+				ECE2CDD21CCE4CDC0080E624 /* Info.plist */,
+				ECE2CDC11CCE4CDC0080E624 /* Supporting Files */,
+			);
+			path = AutoLinQClient;
+			sourceTree = "<group>";
+		};
+		ECE2CDC11CCE4CDC0080E624 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECE2CDC21CCE4CDC0080E624 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1313,6 +1476,23 @@
 			productReference = EC0BB4C61CCB888100EB7394 /* libAutoLinQ_lib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		ECE2CDBE1CCE4CDC0080E624 /* AutoLinQClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECE2CDD51CCE4CDC0080E624 /* Build configuration list for PBXNativeTarget "AutoLinQClient" */;
+			buildPhases = (
+				ECE2CDBB1CCE4CDC0080E624 /* Sources */,
+				ECE2CDBC1CCE4CDC0080E624 /* Frameworks */,
+				ECE2CDBD1CCE4CDC0080E624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutoLinQClient;
+			productName = AutoLinQClient;
+			productReference = ECE2CDBF1CCE4CDC0080E624 /* AutoLinQClient.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1331,6 +1511,9 @@
 					EC0BB4C51CCB888100EB7394 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					ECE2CDBE1CCE4CDC0080E624 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 9AD10D511C96B14C00DD7555 /* Build configuration list for PBXProject "AutoLinQ" */;
@@ -1339,6 +1522,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9AD10D4D1C96B14C00DD7555;
 			productRefGroup = 9AD10D581C96B14C00DD7555 /* Products */;
@@ -1348,6 +1532,7 @@
 				9AD10D561C96B14C00DD7555 /* AutoLinQ */,
 				9AD10EFB1C97A6E200DD7555 /* build */,
 				EC0BB4C51CCB888100EB7394 /* AutoLinQ_lib */,
+				ECE2CDBE1CCE4CDC0080E624 /* AutoLinQClient */,
 			);
 		};
 /* End PBXProject section */
@@ -1361,6 +1546,16 @@
 				9AD10E261C96B1BF00DD7555 /* LICENSE in Resources */,
 				EC0BB4AC1CCB315D00EB7394 /* LICENSE in Resources */,
 				EC0BB41C1CCB30AA00EB7394 /* LICENSE in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECE2CDBD1CCE4CDC0080E624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE2CDD11CCE4CDC0080E624 /* LaunchScreen.storyboard in Resources */,
+				ECE2CDCE1CCE4CDC0080E624 /* Assets.xcassets in Resources */,
+				ECE2CDCC1CCE4CDC0080E624 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1518,7 +1713,144 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ECE2CDBB1CCE4CDC0080E624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECE2CE371CCE4EF00080E624 /* logging_mosq.c in Sources */,
+				ECE2CE381CCE4EF00080E624 /* memory_mosq.c in Sources */,
+				ECE2CE391CCE4EF00080E624 /* messages_mosq.c in Sources */,
+				ECE2CE3A1CCE4EF00080E624 /* mosquitto.c in Sources */,
+				ECE2CE3B1CCE4EF00080E624 /* net_mosq.c in Sources */,
+				ECE2CE3C1CCE4EF00080E624 /* read_handle.c in Sources */,
+				ECE2CE3D1CCE4EF00080E624 /* read_handle_client.c in Sources */,
+				ECE2CE3E1CCE4EF00080E624 /* read_handle_shared.c in Sources */,
+				ECE2CE3F1CCE4EF00080E624 /* send_client_mosq.c in Sources */,
+				ECE2CE401CCE4EF00080E624 /* send_mosq.c in Sources */,
+				ECE2CE411CCE4EF00080E624 /* thread_mosq.c in Sources */,
+				ECE2CE421CCE4EF00080E624 /* time_mosq.c in Sources */,
+				ECE2CE431CCE4EF00080E624 /* tls_mosq.c in Sources */,
+				ECE2CE441CCE4EF00080E624 /* util_mosq.c in Sources */,
+				ECE2CE451CCE4EF00080E624 /* will_mosq.c in Sources */,
+				ECE2CDE21CCE4DA50080E624 /* AFHTTPRequestOperation.m in Sources */,
+				ECE2CDE31CCE4DA50080E624 /* AFHTTPRequestOperationManager.m in Sources */,
+				ECE2CDE41CCE4DA50080E624 /* AFHTTPSessionManager.m in Sources */,
+				ECE2CDE51CCE4DA50080E624 /* AFNetworkReachabilityManager.m in Sources */,
+				ECE2CDE61CCE4DA50080E624 /* AFSecurityPolicy.m in Sources */,
+				ECE2CDE71CCE4DA50080E624 /* AFURLConnectionOperation.m in Sources */,
+				ECE2CDE81CCE4DA50080E624 /* AFURLRequestSerialization.m in Sources */,
+				ECE2CDE91CCE4DA50080E624 /* AFURLResponseSerialization.m in Sources */,
+				ECE2CDEA1CCE4DA50080E624 /* AFURLSessionManager.m in Sources */,
+				ECE2CDEB1CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CDEC1CCE4DA50080E624 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				ECE2CDED1CCE4DA50080E624 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				ECE2CDEE1CCE4DA50080E624 /* UIAlertView+AFNetworking.m in Sources */,
+				ECE2CDEF1CCE4DA50080E624 /* UIButton+AFNetworking.m in Sources */,
+				ECE2CDF01CCE4DA50080E624 /* UIImageView+AFNetworking.m in Sources */,
+				ECE2CDF11CCE4DA50080E624 /* UIProgressView+AFNetworking.m in Sources */,
+				ECE2CDF21CCE4DA50080E624 /* UIRefreshControl+AFNetworking.m in Sources */,
+				ECE2CDF31CCE4DA50080E624 /* UIWebView+AFNetworking.m in Sources */,
+				ECE2CDF41CCE4DA50080E624 /* QNDnsManager.m in Sources */,
+				ECE2CDF51CCE4DA50080E624 /* QNDomain.m in Sources */,
+				ECE2CDF61CCE4DA50080E624 /* QNNetworkInfo.m in Sources */,
+				ECE2CDF71CCE4DA50080E624 /* QNRecord.m in Sources */,
+				ECE2CDF81CCE4DA50080E624 /* QNDnspodEnterprise.m in Sources */,
+				ECE2CDF91CCE4DA50080E624 /* QNDnspodFree.m in Sources */,
+				ECE2CDFA1CCE4DA50080E624 /* QNHijackingDetectWrapper.m in Sources */,
+				ECE2CDFB1CCE4DA50080E624 /* QNHosts.m in Sources */,
+				ECE2CDFC1CCE4DA50080E624 /* QNResolver.m in Sources */,
+				ECE2CDFD1CCE4DA50080E624 /* QNDes.m in Sources */,
+				ECE2CDFE1CCE4DA50080E624 /* QNHex.m in Sources */,
+				ECE2CDFF1CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CE001CCE4DA50080E624 /* GTM_Base64.m in Sources */,
+				ECE2CE011CCE4DA50080E624 /* QNALAssetFile.m in Sources */,
+				ECE2CE021CCE4DA50080E624 /* QNAsyncRun.m in Sources */,
+				ECE2CE031CCE4DA50080E624 /* QNCrc32.m in Sources */,
+				ECE2CE041CCE4DA50080E624 /* QNEtag.m in Sources */,
+				ECE2CE051CCE4DA50080E624 /* QNFile.m in Sources */,
+				ECE2CE061CCE4DA50080E624 /* QNPHAssetFile.m in Sources */,
+				ECE2CE071CCE4DA50080E624 /* QNSystem.m in Sources */,
+				ECE2CE081CCE4DA50080E624 /* QNUrlSafeBase64.m in Sources */,
+				ECE2CE091CCE4DA50080E624 /* QNDns.m in Sources */,
+				ECE2CE0A1CCE4DA50080E624 /* QNHttpManager.m in Sources */,
+				ECE2CE0B1CCE4DA50080E624 /* QNResponseInfo.m in Sources */,
+				ECE2CE0C1CCE4DA50080E624 /* QNSessionManager.m in Sources */,
+				ECE2CE0D1CCE4DA50080E624 /* QNStats.m in Sources */,
+				ECE2CE0E1CCE4DA50080E624 /* QNUserAgent.m in Sources */,
+				ECE2CE0F1CCE4DA50080E624 /* QNReachability.m in Sources */,
+				ECE2CE101CCE4DA50080E624 /* QNFileRecorder.m in Sources */,
+				ECE2CE111CCE4DA50080E624 /* QNConfiguration.m in Sources */,
+				ECE2CE121CCE4DA50080E624 /* QNFormUpload.m in Sources */,
+				ECE2CE131CCE4DA50080E624 /* QNResumeUpload.m in Sources */,
+				ECE2CE141CCE4DA50080E624 /* QNUploadManager.m in Sources */,
+				ECE2CE151CCE4DA50080E624 /* QNUploadOption.m in Sources */,
+				ECE2CE161CCE4DA50080E624 /* QNUpToken.m in Sources */,
+				ECE2CE171CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CE181CCE4DA50080E624 /* GZIP.m in Sources */,
+				ECE2CE191CCE4DA50080E624 /* LICENCE.md in Sources */,
+				ECE2CE1A1CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CE1B1CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CE1C1CCE4DA50080E624 /* README.md in Sources */,
+				ECE2CE1D1CCE4DA50080E624 /* AbstractMessage.m in Sources */,
+				ECE2CE1E1CCE4DA50080E624 /* AbstractMessageBuilder.m in Sources */,
+				ECE2CE1F1CCE4DA50080E624 /* CodedInputStream.m in Sources */,
+				ECE2CE201CCE4DA50080E624 /* CodedOutputStream.m in Sources */,
+				ECE2CE211CCE4DA50080E624 /* ConcreteExtensionField.m in Sources */,
+				ECE2CE221CCE4DA50080E624 /* Descriptor.pb.m in Sources */,
+				ECE2CE231CCE4DA50080E624 /* ExtendableMessage.m in Sources */,
+				ECE2CE241CCE4DA50080E624 /* ExtendableMessageBuilder.m in Sources */,
+				ECE2CE251CCE4DA50080E624 /* ExtensionRegistry.m in Sources */,
+				ECE2CE261CCE4DA50080E624 /* Field.m in Sources */,
+				ECE2CE271CCE4DA50080E624 /* GeneratedMessage.m in Sources */,
+				ECE2CE281CCE4DA50080E624 /* GeneratedMessageBuilder.m in Sources */,
+				ECE2CE291CCE4DA50080E624 /* MutableExtensionRegistry.m in Sources */,
+				ECE2CE2A1CCE4DA50080E624 /* MutableField.m in Sources */,
+				ECE2CE2B1CCE4DA50080E624 /* ObjectivecDescriptor.pb.m in Sources */,
+				ECE2CE2C1CCE4DA50080E624 /* PBArray.m in Sources */,
+				ECE2CE2D1CCE4DA50080E624 /* RingBuffer.m in Sources */,
+				ECE2CE2E1CCE4DA50080E624 /* TextFormat.m in Sources */,
+				ECE2CE2F1CCE4DA50080E624 /* UnknownFieldSet.m in Sources */,
+				ECE2CE301CCE4DA50080E624 /* UnknownFieldSetBuilder.m in Sources */,
+				ECE2CE311CCE4DA50080E624 /* Utilities.m in Sources */,
+				ECE2CE321CCE4DA50080E624 /* WireFormat.m in Sources */,
+				ECE2CDD61CCE4CFF0080E624 /* QiniuUtil.m in Sources */,
+				ECE2CDD71CCE4CFF0080E624 /* Message.m in Sources */,
+				ECE2CDD81CCE4CFF0080E624 /* Payload.m in Sources */,
+				ECE2CDD91CCE4CFF0080E624 /* IndexGenerator.m in Sources */,
+				ECE2CDDA1CCE4CFF0080E624 /* Des.m in Sources */,
+				ECE2CDDB1CCE4CFF0080E624 /* Hmac.m in Sources */,
+				ECE2CDDC1CCE4CFF0080E624 /* StringUitl.m in Sources */,
+				ECE2CDDD1CCE4CFF0080E624 /* ZipUtil.m in Sources */,
+				ECE2CDDE1CCE4CFF0080E624 /* HttpClient.m in Sources */,
+				ECE2CDDF1CCE4CFF0080E624 /* MQTTClient.m in Sources */,
+				ECE2CDE01CCE4CFF0080E624 /* ContiMessage.pb.m in Sources */,
+				ECE2CDE11CCE4CFF0080E624 /* ProtoBufManager.m in Sources */,
+				ECE2CDC91CCE4CDC0080E624 /* ViewController.m in Sources */,
+				ECE2CDC61CCE4CDC0080E624 /* AppDelegate.m in Sources */,
+				ECE2CDC31CCE4CDC0080E624 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ECE2CDCA1CCE4CDC0080E624 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECE2CDCB1CCE4CDC0080E624 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECE2CDCF1CCE4CDC0080E624 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECE2CDD01CCE4CDC0080E624 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		9AD10D5D1C96B14C00DD7555 /* Debug */ = {
@@ -1666,6 +1998,7 @@
 		EC0BB4CD1CCB888100EB7394 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1676,10 +2009,37 @@
 		EC0BB4CE1CCB888100EB7394 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		ECE2CDD31CCE4CDC0080E624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AutoLinQ/frameworks/MQTTKit/libmosquitto\"";
+				INFOPLIST_FILE = AutoLinQClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangsky.AutoLinQClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECE2CDD41CCE4CDC0080E624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AutoLinQ/frameworks/MQTTKit/libmosquitto\"";
+				INFOPLIST_FILE = AutoLinQClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangsky.AutoLinQClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -1718,6 +2078,15 @@
 			buildConfigurations = (
 				EC0BB4CD1CCB888100EB7394 /* Debug */,
 				EC0BB4CE1CCB888100EB7394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECE2CDD51CCE4CDC0080E624 /* Build configuration list for PBXNativeTarget "AutoLinQClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE2CDD31CCE4CDC0080E624 /* Debug */,
+				ECE2CDD41CCE4CDC0080E624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
