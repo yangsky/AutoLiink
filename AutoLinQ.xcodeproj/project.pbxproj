@@ -2023,7 +2023,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AutoLinQ/frameworks/MQTTKit/libmosquitto\"";
 				INFOPLIST_FILE = AutoLinQClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsky.AutoLinQClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2036,7 +2036,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/AutoLinQ/frameworks/MQTTKit/libmosquitto\"";
 				INFOPLIST_FILE = AutoLinQClient/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yangsky.AutoLinQClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2089,6 +2089,7 @@
 				ECE2CDD41CCE4CDC0080E624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
