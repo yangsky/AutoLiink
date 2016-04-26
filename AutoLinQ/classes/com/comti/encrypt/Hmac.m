@@ -22,8 +22,17 @@
     unsigned char cHMAC[CC_SHA1_DIGEST_LENGTH];
     CCHmac(kCCHmacAlgSHA1, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
     
-    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
-    NSString *hash = [HMAC base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    // base64
+    /*
+     NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)];
+     NSString *hash = [HMAC base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+     */
+    
+    // to hex
+    NSMutableString *hash = [[NSMutableString alloc] init];
+    for (int i=0; i<CC_SHA1_DIGEST_LENGTH; i++) {
+        [hash appendFormat:@"%02x", cHMAC[i]];
+    }
     
     return hash;
 }
