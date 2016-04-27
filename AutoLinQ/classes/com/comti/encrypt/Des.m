@@ -38,8 +38,8 @@
     
     if (encryptOperation == kCCDecrypt) {
 
-        // base64 decrypt
-        NSData *decryptData = [[NSData alloc] initWithBase64EncodedString:sText options:NSDataBase64DecodingIgnoreUnknownCharacters];//转成utf-8并decode
+        // string to byte
+        NSData *decryptData = [self stringToByte:sText];
         dataInLength = [decryptData length];
         dataIn = [decryptData bytes];
     } else {
@@ -83,12 +83,69 @@
         result = [[NSString alloc] initWithData:[NSData dataWithBytes:(const void *)dataOut length:(NSUInteger)dataOutMoved] encoding:NSUTF8StringEncoding];
     } else {
 
-        // base64 encod
-        NSData *data = [NSData dataWithBytes:(const void *)dataOut length:(NSUInteger)dataOutMoved];
-        result = [data base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+        // to hex
+        NSMutableString *hash = [[NSMutableString alloc] init];
+
+        for (int i=0; i<dataOutAvailable; i++) {
+            
+            [hash appendFormat:@"%02x", dataOut[i]];
+        }
+        
+        result = hash;
     }
     
     return result;
+}
+
+// string to byte
++ (NSData *)stringToByte:(NSString*)string {
+
+    NSString *hexString=[[string uppercaseString] stringByReplacingOccurrencesOfString:@" " withString:@""];
+
+    if ([hexString length]%2 != 0) {
+
+        return nil;
+    }
+
+    Byte tempbyt[1]={0};
+    NSMutableData* bytes=[NSMutableData data];
+
+    for(int i=0;i<[hexString length];i++) {
+
+        unichar hex_char1 = [hexString characterAtIndex:i];
+        int int_ch1;
+        
+        if(hex_char1 >= '0' && hex_char1 <='9') {
+            
+            int_ch1 = (hex_char1-48)*16;
+        } else if(hex_char1 >= 'A' && hex_char1 <='F') {
+            
+            int_ch1 = (hex_char1-55)*16;
+        } else {
+            
+            return nil;
+        }
+        i++;
+        
+        unichar hex_char2 = [hexString characterAtIndex:i];
+        int int_ch2;
+        
+        if(hex_char2 >= '0' && hex_char2 <='9') {
+            
+            int_ch2 = (hex_char2-48);
+        } else if(hex_char2 >= 'A' && hex_char2 <='F') {
+            
+            int_ch2 = hex_char2-55;
+        } else {
+            
+            return nil;
+        }
+        
+        tempbyt[0] = int_ch1 + int_ch2;
+        [bytes appendBytes:tempbyt length:1];
+    }
+
+    return bytes;
 }
 
 @end

@@ -163,7 +163,13 @@
         
         NSData *data = [_data dataUsingEncoding:NSUTF8StringEncoding];
         NSData *compressedData = [ZipUtil compresszip:data];
-        _data = [[NSString alloc] initWithData:compressedData encoding:NSUTF8StringEncoding];
+        // to hex string
+        Byte *testByte = (Byte *)[compressedData bytes];
+        NSMutableString *hash = [[NSMutableString alloc] init];
+        for(int i=0;i<[compressedData length];i++) {
+            [hash appendFormat:@"%02x", testByte[i]];
+        }
+        _data = hash;
     }
     
     // base64
