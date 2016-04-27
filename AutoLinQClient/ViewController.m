@@ -10,8 +10,6 @@
 #import "QiniuUtil.h"
 #import "Payload.h"
 #import "HttpClient.h"
-#import <CommonCrypto/CommonCryptor.h>
-#import <CommonCrypto/CommonHMAC.h>
 
 @interface ViewController ()
 

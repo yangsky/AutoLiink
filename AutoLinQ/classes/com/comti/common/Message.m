@@ -126,11 +126,13 @@
 
 - (NSString *)token {
     
+    NSDictionary *dictionary = [self.infoDictionary objectForKey:@"AutoLinQ"];
+    
     NSString *text = [NSString stringWithFormat:@"%@%@%@", self.appID, self.funcID, self.timeStamp];
-    //    NSString *key = @"appkey";
+    NSString *key = dictionary[@"HmacKey"];
     
     // HMAC
-    return [Hmac encrypt2HMAC:text key:text];
+    return [Hmac encrypt2HMAC:text key:text]; // [Hmac encrypt2HMAC:text key:key];
 }
 
 - (NSString *)pkgID {
@@ -153,8 +155,11 @@
     // DES encrypt
     if ([self.isEncryption isEqualToString:@"1"]) {
         
+        NSDictionary *dictionary = [self.infoDictionary objectForKey:@"AutoLinQ"];
+        NSString *key = dictionary[@"DesKey"];
+        
         NSString *tempStr = _data;
-        tempStr = [Des encrypt2DES:_data key:@""];
+        tempStr = [Des encrypt2DES:_data key:key];
         _data = tempStr;
     }
     
