@@ -132,7 +132,7 @@
     NSString *key = dictionary[@"HmacKey"];
     
     // HMAC
-    return [Hmac encrypt2HMAC:text key:text]; // [Hmac encrypt2HMAC:text key:key];
+    return [Hmac encrypt2HMAC:text key:key];
 }
 
 - (NSString *)pkgID {
@@ -168,13 +168,7 @@
         
         NSData *data = [_data dataUsingEncoding:NSUTF8StringEncoding];
         NSData *compressedData = [ZipUtil compresszip:data];
-        // to hex string
-        Byte *testByte = (Byte *)[compressedData bytes];
-        NSMutableString *hash = [[NSMutableString alloc] init];
-        for(int i=0;i<[compressedData length];i++) {
-            [hash appendFormat:@"%02x", testByte[i]];
-        }
-        _data = hash;
+        _data = [[NSString alloc] initWithData:compressedData encoding:NSUTF8StringEncoding];
     }
     
     // base64

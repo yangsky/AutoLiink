@@ -59,7 +59,7 @@
     dataOut = malloc( dataOutAvailable * sizeof(uint8_t));
     memset((void *)dataOut, 0x0, dataOutAvailable);
     
-    NSString *initIv = @"12345678";
+    NSString *initIv = key;
     const void *vkey = (const void *) [key UTF8String];
     const void *iv = (const void *) [initIv UTF8String];
     

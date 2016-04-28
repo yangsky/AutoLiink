@@ -5,9 +5,9 @@
 	<key>AutoLinQ</key>
 	<dict>
 		<key>DesKey</key>
-		<string>appkey</string>
+		<string>go2home2</string>
 		<key>HmacKey</key>
-		<string>appkey</string>
+		<string>go2home2</string>
 	</dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
