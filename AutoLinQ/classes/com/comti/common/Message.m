@@ -168,12 +168,13 @@
         
         NSData *data = [_data dataUsingEncoding:NSUTF8StringEncoding];
         NSData *compressedData = [ZipUtil compresszip:data];
-        _data = [[NSString alloc] initWithData:compressedData encoding:NSUTF8StringEncoding];
+//        _data = [[NSString alloc] initWithData:compressedData encoding:NSUTF8StringEncoding];
+        _data = [compressedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
+    } else {
+        // base64
+        NSData *tempData = [_data dataUsingEncoding:NSUTF8StringEncoding];
+        _data = [tempData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
     }
-    
-    // base64
-    NSData *tempData = [_data dataUsingEncoding:NSUTF8StringEncoding];
-    _data = [tempData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
     
     return _data;
 }
