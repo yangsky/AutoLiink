@@ -22,6 +22,13 @@
 
 /* Begin PBXBuildFile section */
 		0E61F4421CA2BEF50016857A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E61F4411CA2BEF50016857A /* libz.tbd */; };
+		9AB22C4F1CD64DA8005BC2A6 /* Const.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB22C4D1CD64DA8005BC2A6 /* Const.h */; };
+		9AC4ABA71CD2F4F100B10E6A /* IndexGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC4ABA21CD2F4F100B10E6A /* IndexGenerator.h */; };
+		9AC4ABA81CD2F4F100B10E6A /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4ABA31CD2F4F100B10E6A /* IndexGenerator.m */; };
+		9AC4ABA91CD2F4F100B10E6A /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4ABA31CD2F4F100B10E6A /* IndexGenerator.m */; };
+		9AC4ABAA1CD2F4F100B10E6A /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AC4ABA51CD2F4F100B10E6A /* JSONKit.h */; };
+		9AC4ABAB1CD2F4F100B10E6A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4ABA61CD2F4F100B10E6A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9AC4ABAC1CD2F4F100B10E6A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9AC4ABA61CD2F4F100B10E6A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9AD10D5B1C96B14C00DD7555 /* AutoLinQ.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AD10E081C96B1BF00DD7555 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D8B1C96B1BF00DD7555 /* config.h */; };
 		9AD10E091C96B1BF00DD7555 /* dummypthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AD10D8C1C96B1BF00DD7555 /* dummypthread.h */; };
@@ -118,8 +125,6 @@
 		EC0BB3671CCB2FFF00EB7394 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
 		EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3611CCB2FFF00EB7394 /* Payload.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC0BB3691CCB2FFF00EB7394 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
-		EC0BB36A1CCB2FFF00EB7394 /* IndexGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB3641CCB2FFF00EB7394 /* IndexGenerator.h */; };
-		EC0BB36B1CCB2FFF00EB7394 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
 		EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = EC0BB36D1CCB301A00EB7394 /* QiniuUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EC0BB3701CCB301A00EB7394 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
 		EC0BB3AE1CCB303500EB7394 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = EC0BB3721CCB303500EB7394 /* LICENSE */; };
@@ -247,7 +252,6 @@
 		EC0BB4CF1CCB891700EB7394 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
 		EC0BB4D01CCB892100EB7394 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
 		EC0BB4D11CCB892100EB7394 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
-		EC0BB4D21CCB892400EB7394 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
 		EC0BB4D31CCB892900EB7394 /* Des.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD18F1CCB2F13009B8F64 /* Des.m */; };
 		EC0BB4D41CCB892900EB7394 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
 		EC0BB4D51CCB892D00EB7394 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
@@ -288,7 +292,6 @@
 		ECE2CDD61CCE4CFF0080E624 /* QiniuUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */; };
 		ECE2CDD71CCE4CFF0080E624 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3601CCB2FFF00EB7394 /* Message.m */; };
 		ECE2CDD81CCE4CFF0080E624 /* Payload.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3621CCB2FFF00EB7394 /* Payload.m */; };
-		ECE2CDD91CCE4CFF0080E624 /* IndexGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */; };
 		ECE2CDDA1CCE4CFF0080E624 /* Des.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD18F1CCB2F13009B8F64 /* Des.m */; };
 		ECE2CDDB1CCE4CFF0080E624 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
 		ECE2CDDC1CCE4CFF0080E624 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
@@ -412,6 +415,11 @@
 
 /* Begin PBXFileReference section */
 		0E61F4411CA2BEF50016857A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9AB22C4D1CD64DA8005BC2A6 /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		9AC4ABA21CD2F4F100B10E6A /* IndexGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexGenerator.h; sourceTree = "<group>"; };
+		9AC4ABA31CD2F4F100B10E6A /* IndexGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexGenerator.m; sourceTree = "<group>"; };
+		9AC4ABA51CD2F4F100B10E6A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9AC4ABA61CD2F4F100B10E6A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		9AD10D571C96B14C00DD7555 /* AutoLinQ.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLinQ.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AD10D5A1C96B14C00DD7555 /* AutoLinQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLinQ.h; sourceTree = "<group>"; };
 		9AD10D5C1C96B14C00DD7555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -510,8 +518,6 @@
 		EC0BB3601CCB2FFF00EB7394 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		EC0BB3611CCB2FFF00EB7394 /* Payload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Payload.h; sourceTree = "<group>"; };
 		EC0BB3621CCB2FFF00EB7394 /* Payload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Payload.m; sourceTree = "<group>"; };
-		EC0BB3641CCB2FFF00EB7394 /* IndexGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexGenerator.h; sourceTree = "<group>"; };
-		EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexGenerator.m; sourceTree = "<group>"; };
 		EC0BB36D1CCB301A00EB7394 /* QiniuUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QiniuUtil.h; sourceTree = "<group>"; };
 		EC0BB36E1CCB301A00EB7394 /* QiniuUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QiniuUtil.m; sourceTree = "<group>"; };
 		EC0BB3721CCB303500EB7394 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -691,6 +697,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9AC4ABA11CD2F4F100B10E6A /* util */ = {
+			isa = PBXGroup;
+			children = (
+				9AB22C4D1CD64DA8005BC2A6 /* Const.h */,
+				9AC4ABA21CD2F4F100B10E6A /* IndexGenerator.h */,
+				9AC4ABA31CD2F4F100B10E6A /* IndexGenerator.m */,
+				9AC4ABA41CD2F4F100B10E6A /* JSONKit */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		9AC4ABA41CD2F4F100B10E6A /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9AC4ABA51CD2F4F100B10E6A /* JSONKit.h */,
+				9AC4ABA61CD2F4F100B10E6A /* JSONKit.m */,
+			);
+			path = JSONKit;
+			sourceTree = "<group>";
+		};
 		9AD10D4D1C96B14C00DD7555 = {
 			isa = PBXGroup;
 			children = (
@@ -886,13 +912,13 @@
 		9AD10E641C96BF5000DD7555 /* comti */ = {
 			isa = PBXGroup;
 			children = (
-				EC0BB36C1CCB301A00EB7394 /* qiniu */,
 				EC0BB35E1CCB2FFF00EB7394 /* common */,
-				EC8AD18D1CCB2F13009B8F64 /* encrypt */,
-				EC8AD17E1CCB2E95009B8F64 /* compress */,
 				9AD10E651C96BF5000DD7555 /* https */,
 				9AD10E661C96BF5000DD7555 /* mqtt */,
 				9AD10E691C96BF5000DD7555 /* protocolBuffer */,
+				EC8AD18D1CCB2F13009B8F64 /* encrypt */,
+				EC8AD17E1CCB2E95009B8F64 /* compress */,
+				EC0BB36C1CCB301A00EB7394 /* qiniu */,
 			);
 			path = comti;
 			sourceTree = "<group>";
@@ -937,22 +963,13 @@
 		EC0BB35E1CCB2FFF00EB7394 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				9AC4ABA11CD2F4F100B10E6A /* util */,
 				EC0BB35F1CCB2FFF00EB7394 /* Message.h */,
 				EC0BB3601CCB2FFF00EB7394 /* Message.m */,
 				EC0BB3611CCB2FFF00EB7394 /* Payload.h */,
 				EC0BB3621CCB2FFF00EB7394 /* Payload.m */,
-				EC0BB3631CCB2FFF00EB7394 /* util */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		EC0BB3631CCB2FFF00EB7394 /* util */ = {
-			isa = PBXGroup;
-			children = (
-				EC0BB3641CCB2FFF00EB7394 /* IndexGenerator.h */,
-				EC0BB3651CCB2FFF00EB7394 /* IndexGenerator.m */,
-			);
-			path = util;
 			sourceTree = "<group>";
 		};
 		EC0BB36C1CCB301A00EB7394 /* qiniu */ = {
@@ -1304,6 +1321,7 @@
 				EC0BB3681CCB2FFF00EB7394 /* Payload.h in Headers */,
 				EC8AD1811CCB2E95009B8F64 /* ZipUtil.h in Headers */,
 				EC8AD1971CCB2F13009B8F64 /* Hmac.h in Headers */,
+				9AC4ABA71CD2F4F100B10E6A /* IndexGenerator.h in Headers */,
 				9AD10E781C96D7B800DD7555 /* ContiMessage.pb.h in Headers */,
 				EC0BB36F1CCB301A00EB7394 /* QiniuUtil.h in Headers */,
 				EC8AD1951CCB2F13009B8F64 /* Des.h in Headers */,
@@ -1358,7 +1376,6 @@
 				EC0BB4B21CCB315D00EB7394 /* UIAlertView+AFNetworking.h in Headers */,
 				EC0BB3D31CCB303500EB7394 /* QNFileRecorder.h in Headers */,
 				EC0BB4161CCB30AA00EB7394 /* QNResolver.h in Headers */,
-				EC0BB36A1CCB2FFF00EB7394 /* IndexGenerator.h in Headers */,
 				EC0BB4181CCB30AA00EB7394 /* QNDes.h in Headers */,
 				9AD10E341C96B1BF00DD7555 /* ConcreteExtensionField.h in Headers */,
 				EC0BB4B91CCB315D00EB7394 /* UIKit+AFNetworking.h in Headers */,
@@ -1386,6 +1403,7 @@
 				EC0BB3D61CCB303500EB7394 /* QNConfiguration.h in Headers */,
 				EC0BB3AF1CCB303500EB7394 /* GTM_Base64.h in Headers */,
 				EC0BB40D1CCB30AA00EB7394 /* HappyDNS.h in Headers */,
+				9AC4ABAA1CD2F4F100B10E6A /* JSONKit.h in Headers */,
 				EC0BB40A1CCB30AA00EB7394 /* QNRecord.h in Headers */,
 				EC0BB3C01CCB303500EB7394 /* QNUrlSafeBase64.h in Headers */,
 				EC0BB3CE1CCB303500EB7394 /* QNUserAgent.h in Headers */,
@@ -1393,6 +1411,7 @@
 				EC0BB3BC1CCB303500EB7394 /* QNPHAssetFile.h in Headers */,
 				9AD10E421C96B1BF00DD7555 /* GeneratedMessage.h in Headers */,
 				9AD10E151C96B1BF00DD7555 /* net_mosq.h in Headers */,
+				9AB22C4F1CD64DA8005BC2A6 /* Const.h in Headers */,
 				9AD10E0B1C96B1BF00DD7555 /* logging_mosq.h in Headers */,
 				9AD10E411C96B1BF00DD7555 /* ForwardDeclarations.h in Headers */,
 				EC0BB3CA1CCB303500EB7394 /* QNSessionManager.h in Headers */,
@@ -1640,11 +1659,11 @@
 				EC0BB3B01CCB303500EB7394 /* GTM_Base64.m in Sources */,
 				EC0BB4131CCB30AA00EB7394 /* QNHijackingDetectWrapper.m in Sources */,
 				EC0BB3D71CCB303500EB7394 /* QNConfiguration.m in Sources */,
+				9AC4ABA81CD2F4F100B10E6A /* IndexGenerator.m in Sources */,
 				9AD10E4F1C96B1BF00DD7555 /* PBArray.m in Sources */,
 				EC0BB4B81CCB315D00EB7394 /* UIImageView+AFNetworking.m in Sources */,
 				EC0BB3CB1CCB303500EB7394 /* QNSessionManager.m in Sources */,
 				EC0BB4AD1CCB315D00EB7394 /* README.md in Sources */,
-				EC0BB36B1CCB2FFF00EB7394 /* IndexGenerator.m in Sources */,
 				EC0BB4A71CCB315D00EB7394 /* AFURLRequestSerialization.m in Sources */,
 				9AD10E561C96B1BF00DD7555 /* UnknownFieldSet.m in Sources */,
 				EC0BB3E31CCB303500EB7394 /* README.md in Sources */,
@@ -1684,6 +1703,7 @@
 				EC0BB3D91CCB303500EB7394 /* QNFormUpload.m in Sources */,
 				9AD10E241C96B1BF00DD7555 /* will_mosq.c in Sources */,
 				9AD10E4D1C96B1BF00DD7555 /* ObjectivecDescriptor.pb.m in Sources */,
+				9AC4ABAB1CD2F4F100B10E6A /* JSONKit.m in Sources */,
 				EC0BB4A11CCB315D00EB7394 /* AFNetworkReachabilityManager.m in Sources */,
 				EC0BB4B51CCB315D00EB7394 /* UIButton+AFNetworking.m in Sources */,
 				9AD10E491C96B1BF00DD7555 /* MutableExtensionRegistry.m in Sources */,
@@ -1704,7 +1724,6 @@
 				EC0BB4DA1CCB894100EB7394 /* ContiMessage.pb.m in Sources */,
 				EC0BB4D91CCB893C00EB7394 /* ProtoBufManager.m in Sources */,
 				EC0BB4D01CCB892100EB7394 /* Message.m in Sources */,
-				EC0BB4D21CCB892400EB7394 /* IndexGenerator.m in Sources */,
 				EC0BB4D51CCB892D00EB7394 /* StringUitl.m in Sources */,
 				EC0BB4D61CCB893000EB7394 /* ZipUtil.m in Sources */,
 				EC0BB4D41CCB892900EB7394 /* Hmac.m in Sources */,
@@ -1727,6 +1746,7 @@
 				ECE2CE3E1CCE4EF00080E624 /* read_handle_shared.c in Sources */,
 				ECE2CE3F1CCE4EF00080E624 /* send_client_mosq.c in Sources */,
 				ECE2CE401CCE4EF00080E624 /* send_mosq.c in Sources */,
+				9AC4ABA91CD2F4F100B10E6A /* IndexGenerator.m in Sources */,
 				ECE2CE411CCE4EF00080E624 /* thread_mosq.c in Sources */,
 				ECE2CE421CCE4EF00080E624 /* time_mosq.c in Sources */,
 				ECE2CE431CCE4EF00080E624 /* tls_mosq.c in Sources */,
@@ -1770,6 +1790,7 @@
 				ECE2CE051CCE4DA50080E624 /* QNFile.m in Sources */,
 				ECE2CE061CCE4DA50080E624 /* QNPHAssetFile.m in Sources */,
 				ECE2CE071CCE4DA50080E624 /* QNSystem.m in Sources */,
+				9AC4ABAC1CD2F4F100B10E6A /* JSONKit.m in Sources */,
 				ECE2CE081CCE4DA50080E624 /* QNUrlSafeBase64.m in Sources */,
 				ECE2CE091CCE4DA50080E624 /* QNDns.m in Sources */,
 				ECE2CE0A1CCE4DA50080E624 /* QNHttpManager.m in Sources */,
@@ -1816,7 +1837,6 @@
 				ECE2CDD61CCE4CFF0080E624 /* QiniuUtil.m in Sources */,
 				ECE2CDD71CCE4CFF0080E624 /* Message.m in Sources */,
 				ECE2CDD81CCE4CFF0080E624 /* Payload.m in Sources */,
-				ECE2CDD91CCE4CFF0080E624 /* IndexGenerator.m in Sources */,
 				ECE2CDDA1CCE4CFF0080E624 /* Des.m in Sources */,
 				ECE2CDDB1CCE4CFF0080E624 /* Hmac.m in Sources */,
 				ECE2CDDC1CCE4CFF0080E624 /* StringUitl.m in Sources */,

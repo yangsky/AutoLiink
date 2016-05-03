@@ -2,20 +2,14 @@
 //  ProtoBufManager.m
 //  AutoLinQ
 //
-//  Created by mac on 16/3/14.
-//
+//  Created by com.conti on 16/4/17.
+//  Copyright (c) 2016年 com.conti. All rights reserved.
 //
 
 #import "ProtoBufManager.h"
 #import "ContiMessage.pb.h"
 
-#define kAppId        @"appId"
-#define kCategoryId   @"categoryId"
-#define kFuncId       @"funcId"
-#define kAppVersion   @"appVersion"
-#define kTimeStamp    @"timeStamp"
-#define kIsencryption @"isencryption"
-#define kData         @"data"
+#import "Const.h"
 
 @implementation ProtoBufManager
 
@@ -23,13 +17,18 @@
 
     ContiMessageBuilder *builder = [ContiMessage builder];
 
-    [builder setAppId:[dict objectForKey:kAppId]];
-    [builder setCategoryId:[dict objectForKey:kCategoryId]];
-    [builder setFuncId:[dict objectForKey:kFuncId]];
-    [builder setAppVersion:[dict objectForKey:kAppVersion]];
-    [builder setTimeStamp:[dict objectForKey:kTimeStamp]];
-    [builder setIsencryption:[[dict objectForKey:kIsencryption] intValue]];
-    [builder setData:[dict objectForKey:kData]];
+    [builder setAppId:[dict objectForKey:ContiMessage_appID]];
+    [builder setCategoryId:[dict objectForKey:ContiMessage_categoryID]];
+    [builder setFuncId:[dict objectForKey:ContiMessage_funcID]];
+    [builder setAppVersion:[dict objectForKey:ContiMessage_appVersion]];
+    [builder setTimeStamp:[dict objectForKey:ContiMessage_timeStamp]];
+    [builder setToken:[dict objectForKey:ContiMessage_token]];
+    [builder setPkgId:[dict objectForKey:ContiMessage_pkgID]];
+    [builder setPkgIndex:[[dict objectForKey:ContiMessage_pkgIndex] intValue]];
+    [builder setPkgNum:[[dict objectForKey:ContiMessage_pkgNum] intValue]];
+    [builder setIsencryption:[[dict objectForKey:ContiMessage_isencryption] intValue]];
+    [builder setIscompress:[[dict objectForKey:ContiMessage_iscompress] intValue]];
+    [builder setDataStr:[dict objectForKey:ContiMessage_dataStr]];
     
     ContiMessage *contiMessage = [builder build];
 
@@ -37,6 +36,57 @@
     if (![messageData writeToFile:outputFile atomically:YES]) {
         NSLog(@"ProtoBufManager writeToFile failure! %@, %@", outputFile, dict);
     }
+}
+
++ (NSData *)dictionaryToData:(NSDictionary *)dict {
+    
+    ContiMessageBuilder *builder = [ContiMessage builder];
+    
+    [builder setAppId:[dict objectForKey:ContiMessage_appID]];
+    [builder setCategoryId:[dict objectForKey:ContiMessage_categoryID]];
+    [builder setFuncId:[dict objectForKey:ContiMessage_funcID]];
+    [builder setAppVersion:[dict objectForKey:ContiMessage_appVersion]];
+    [builder setTimeStamp:[dict objectForKey:ContiMessage_timeStamp]];
+    [builder setToken:[dict objectForKey:ContiMessage_token]];
+    [builder setPkgId:[dict objectForKey:ContiMessage_pkgID]];
+    [builder setPkgIndex:[[dict objectForKey:ContiMessage_pkgIndex] intValue]];
+    [builder setPkgNum:[[dict objectForKey:ContiMessage_pkgNum] intValue]];
+    [builder setIsencryption:[[dict objectForKey:ContiMessage_isencryption] intValue]];
+    [builder setIscompress:[[dict objectForKey:ContiMessage_iscompress] intValue]];
+    [builder setDataStr:[dict objectForKey:ContiMessage_dataStr]];
+    
+    ContiMessage *contiMessage = [builder build];
+    
+    NSData *messageData = [contiMessage data];
+    NSLog(@"ProtoBuf%@", [[NSString alloc] initWithData:messageData encoding:NSUTF8StringEncoding]);
+
+    return messageData;
+}
+
++ (NSDictionary *)dataToDictionary:(NSData *)data {
+    
+    NSMutableDictionary *contentDict = [NSMutableDictionary dictionary];
+    
+    ContiMessage *contiMessage = [ContiMessage parseFromData:data];
+    if (contiMessage) {
+        
+        [contentDict setObject:contiMessage.appId forKey:ContiMessage_appID];
+        [contentDict setObject:contiMessage.categoryId forKey:ContiMessage_categoryID];
+        [contentDict setObject:contiMessage.funcId forKey:ContiMessage_funcID];
+        [contentDict setObject:contiMessage.appVersion forKey:ContiMessage_appVersion];
+        [contentDict setObject:contiMessage.timeStamp forKey:ContiMessage_timeStamp];
+        
+        [contentDict setObject:contiMessage.token forKey:ContiMessage_token];
+        [contentDict setObject:contiMessage.pkgId forKey:ContiMessage_pkgID];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.pkgIndex] forKey:ContiMessage_pkgIndex];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.pkgNum] forKey:ContiMessage_pkgNum];
+        
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.isencryption] forKey:ContiMessage_isencryption];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.iscompress] forKey:ContiMessage_iscompress];
+        [contentDict setObject:contiMessage.dataStr forKey:ContiMessage_dataStr];
+    }
+    
+    return contentDict;
 }
 
 - (NSDictionary *)read:(NSString *)dataFile {
@@ -51,13 +101,21 @@
 
     ContiMessage *contiMessage = [ContiMessage parseFromData:data];
     if (contiMessage) {
-        [contentDict setValue:contiMessage.appId forKey:kAppId];
-        [contentDict setValue:contiMessage.categoryId forKey:kCategoryId];
-        [contentDict setValue:contiMessage.funcId forKey:kFuncId];
-        [contentDict setValue:contiMessage.appVersion forKey:kAppVersion];
-        [contentDict setValue:contiMessage.timeStamp forKey:kTimeStamp];
-        [contentDict setValue:[NSNumber numberWithInt:contiMessage.isencryption] forKey:kIsencryption];
-        [contentDict setValue:contiMessage.data forKey:kData];
+
+        [contentDict setObject:contiMessage.appId forKey:ContiMessage_appID];
+        [contentDict setObject:contiMessage.categoryId forKey:ContiMessage_categoryID];
+        [contentDict setObject:contiMessage.funcId forKey:ContiMessage_funcID];
+        [contentDict setObject:contiMessage.appVersion forKey:ContiMessage_appVersion];
+        [contentDict setObject:contiMessage.timeStamp forKey:ContiMessage_timeStamp];
+        
+        [contentDict setObject:contiMessage.token forKey:ContiMessage_token];
+        [contentDict setObject:contiMessage.pkgId forKey:ContiMessage_pkgID];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.pkgIndex] forKey:ContiMessage_pkgIndex];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.pkgNum] forKey:ContiMessage_pkgNum];
+        
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.isencryption] forKey:ContiMessage_isencryption];
+        [contentDict setObject:[NSNumber numberWithInt:contiMessage.iscompress] forKey:ContiMessage_iscompress];
+        [contentDict setObject:contiMessage.dataStr forKey:ContiMessage_dataStr];
     }
     
     return contentDict;

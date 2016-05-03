@@ -12,15 +12,21 @@
 #import "HttpClient.h"
 #import "Des.h"
 #import "ZipUtil.h"
+#import "JSONKit.h"
 
-#define kServer @"http://123.56.102.92:80/server/rest/gateway/root"
+#import "ProtoBufManager.h"
+
+#define kServer  @"http://123.56.102.92:80/server/rest/gateway/root"
+#define kServer2 @"http://123.56.102.92:80/server/rest/gateway/protobuffer/common"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *isEncryptionTextField;
-@property (weak, nonatomic) IBOutlet UITextField *isCompressTextField;
+@property (weak, nonatomic) IBOutlet UITextField *pkgNumUITextField;
+@property (weak, nonatomic) IBOutlet UISwitch *isEncryptionSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *isCompressSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *isProtocolBufferSwitch;
 @property (weak, nonatomic) IBOutlet UIButton *logonButton;
 @property (weak, nonatomic) IBOutlet UILabel *tipLabel;
 
@@ -43,51 +49,68 @@
     
     _passwordTextField.text = @"1234qwer";
     
-    _isEncryptionTextField.text = @"0";
-    _isEncryptionTextField.keyboardType = UIKeyboardTypeNumberPad;
+    _pkgNumUITextField.text = @"1";
+    _pkgNumUITextField.keyboardType = UIKeyboardTypeNumberPad;
     
-    _isCompressTextField.text = @"0";
-    _isCompressTextField.keyboardType = UIKeyboardTypeNumberPad;
+    _isEncryptionSwitch.on = NO;
+    
+    _isCompressSwitch.on = NO;
+    
+    _isProtocolBufferSwitch.on = NO;
 }
 
 - (IBAction)doLogon:(UIButton *)sender {
     
+    _tipLabel.text = @"";
+    
     NSString *username = [_usernameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSString *password = [_passwordTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NSString *isEncryption = [_isEncryptionTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-    NSString *isCompress = [_isCompressTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *pkgNum = [_pkgNumUITextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *isEncryption = _isEncryptionSwitch.on?@"1":@"0";
+    NSString *isCompress = _isCompressSwitch.on?@"1":@"0";
+    NSString *isProtocolBuffer = _isProtocolBufferSwitch.on?@"1":@"0";
     
-    if (username.length == 0 || password.length ==0) {
+    if (username.length == 0 || password.length ==0 || [pkgNum integerValue]<=0) {
         _tipLabel.textColor = [UIColor redColor];
-        _tipLabel.text = @"用户名、密码不能为空！";
+        _tipLabel.text = @"用户名、密码不能为空！分包数必需大于1！";
         return;
-    }
-    if (![isEncryption isEqualToString:@"0"] && ![isEncryption isEqualToString:@"1"]) {
-        isEncryption = @"0";
-    }
-    if (![isCompress isEqualToString:@"0"] && ![isCompress isEqualToString:@"1"]) {
-        isCompress = @"0";
     }
     
     NSString *data = [NSString stringWithFormat:@"{\"username\":\"%@\",\"password\":\"%@\"}", username, password];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
-    NSString *json = [Payload generateCommomMsgWithFunid:@"Logon" pkgNum:@"1" isEncryption:isEncryption isCompress:isCompress data:data];
-    NSLog(@"%@", json);
-    
-    NSError *error;
-    NSDictionary *paramters = [NSJSONSerialization JSONObjectWithData:[json dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    
-    [manager POST:kServer parameters:paramters success:^(NSURLSessionDataTask *task, id responseObject) {
-        _tipLabel.text = [responseObject description];
-        NSLog(@"responseObject=%@", responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        _tipLabel.text = [error localizedDescription];
-        NSLog(@"error=%@", error);
-    }];
+    [dict setObject:@"Logon" forKey:kFuncID];
+    [dict setObject:pkgNum forKey:kPkgNum];
+    [dict setObject:isEncryption forKey:kIsEncryption];
+    [dict setObject:isCompress forKey:kIsCompress];
+    [dict setObject:data forKey:kData];
+
+    if (!isProtocolBuffer) {
+
+        [HttpClient POST:kServer parameters:dict finish:^(id responseObject) {
+            _tipLabel.text = [responseObject description];
+            NSLog(@"responseObject=%@", responseObject);
+        }];
+    } else {
+
+        // generate commom message
+        NSString *payLoadJson = [Payload generateCommomMsgWithFunid:@"Logon" pkgNum:pkgNum isEncryption:isEncryption isCompress:isCompress data:data];
+        // commom message to dictionary
+        NSDictionary *payLoadDict = [payLoadJson objectFromJSONString];
+        
+        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        
+        [manager POST:kServer2 parameters:[ProtoBufManager dictionaryToData:payLoadDict] success:^(NSURLSessionDataTask *task, id responseObject) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _tipLabel.text = [responseObject description];
+            });
+            NSLog(@"response:%@", responseObject);
+        } failure:^(NSURLSessionDataTask *task, NSError *error) {
+            NSLog(@"error:%@", error);
+        }];
+    }
 }
 
 // 点击屏幕任何地方,收起键盘

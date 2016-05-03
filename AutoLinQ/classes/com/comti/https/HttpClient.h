@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "Const.h"
 
 typedef void (^ResponseHandler)(NSURLSessionDataTask *, id);
 typedef void (^FailureHandler)(NSURLSessionDataTask *, NSError *);
@@ -33,5 +34,7 @@ typedef void (^FailureHandler)(NSURLSessionDataTask *, NSError *);
                            the data task and the error describing the network or parsing error that occurred.
  */
 - (void)post:(NSString *)urlString header:(NSDictionary *)headers parameters:(NSDictionary *)parameters contentType:(NSString *)contentType responseHandler:(ResponseHandler)responseHandler failure:(FailureHandler)failureHandler;
+
++ (void)POST:(NSString *)URLString parameters:(id)parameters finish:(void (^)(id responseObject))finish;
 
 @end

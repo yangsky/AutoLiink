@@ -2,8 +2,8 @@
 //  ProtoBufManager.h
 //  AutoLinQ
 //
-//  Created by mac on 16/3/14.
-//
+//  Created by com.conti on 16/4/17.
+//  Copyright (c) 2016年 com.conti. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -26,5 +26,8 @@
  *  @return The contents of the .proto file.(key-value pairs)
  */
 - (NSDictionary *)read:(NSString *)dataFile;
+
++ (NSData *)dictionaryToData:(NSDictionary *)dict;
++ (NSDictionary *)dataToDictionary:(NSData *)data;
 
 @end

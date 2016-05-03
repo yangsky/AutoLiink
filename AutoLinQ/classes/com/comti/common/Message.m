@@ -8,28 +8,12 @@
 
 #import "Message.h"
 #import <UIKit/UIKit.h>
-#import "IndexGenerator.h"
+#import "JSONKit.h"
+#import "Const.h"
 #import "Hmac.h"
 #import "Des.h"
 #import "ZipUtil.h"
-
-#define kFuncIDLogon @"Logon"
-
-#define kCategoryIDAccount @"Account"
-#define kCategoryIDNormal @"Normal"
-
-#define kAppID @"AppID"
-#define kCategoryID @"CategoryID"
-#define kFuncID @"FuncID"
-#define kAppVersion @"AppVersion"
-#define kTimeStamp @"TimeStamp"
-#define kToken @"Token"
-#define kPkgID @"PkgID"
-#define kPkgIndex @"PkgIndex"
-#define kPkgNum @"PkgNum"
-#define kIsEncryption @"IsEncryption"
-#define kIsCompress @"IsCompress"
-#define kData @"Data"
+#import "IndexGenerator.h"
 
 @interface Message ()
 
@@ -62,11 +46,7 @@
 - (NSString *)toJson {
     
     NSDictionary *jsonDict = [self toDictionary];
-    
-    NSError *error;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonDict options:0 error:&error];
-    
-    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    return [jsonDict JSONString];
 }
 
 - (NSDictionary *)toDictionary {
@@ -91,8 +71,8 @@
 #pragma mark - getter
 - (NSString *)appID {
     
-    return @"music"; // 测试数据
-    //    return [NSString stringWithFormat:@"%@", [self.infoDictionary objectForKey:@"CFBundleName"]];
+    NSDictionary *dictionary = [self.infoDictionary objectForKey:kAutoLinQ];
+    return [NSString stringWithFormat:@"%@", [dictionary objectForKey:kAppid]];
 }
 
 - (NSString *)categoryID {
@@ -126,10 +106,10 @@
 
 - (NSString *)token {
     
-    NSDictionary *dictionary = [self.infoDictionary objectForKey:@"AutoLinQ"];
+    NSDictionary *dictionary = [self.infoDictionary objectForKey:kAutoLinQ];
     
     NSString *text = [NSString stringWithFormat:@"%@%@%@", self.appID, self.funcID, self.timeStamp];
-    NSString *key = dictionary[@"HmacKey"];
+    NSString *key = dictionary[kHmacKey];
     
     // HMAC
     return [Hmac encrypt2HMAC:text key:key];
@@ -137,12 +117,15 @@
 
 - (NSString *)pkgID {
     
-    return [NSString stringWithFormat:@"%@", [[UIDevice currentDevice].identifierForVendor UUIDString]];
+    return [NSString stringWithFormat:@"%@-%f", [[UIDevice currentDevice].identifierForVendor UUIDString], [[NSDate date] timeIntervalSince1970]];
 }
 
 - (NSString *)pkgIndex {
-    
-    return [NSString stringWithFormat:@"%@", @"0"];
+
+    if (!_pkgIndex) {
+        _pkgIndex = [NSString stringWithFormat:@"%@", @"0"];
+    }
+    return _pkgIndex;
 }
 
 - (NSString *)data {
@@ -155,8 +138,8 @@
     // DES encrypt
     if ([self.isEncryption isEqualToString:@"1"]) {
         
-        NSDictionary *dictionary = [self.infoDictionary objectForKey:@"AutoLinQ"];
-        NSString *key = dictionary[@"DesKey"];
+        NSDictionary *dictionary = [self.infoDictionary objectForKey:kAutoLinQ];
+        NSString *key = dictionary[kDesKey];
         
         NSString *tempStr = _data;
         tempStr = [Des encrypt2DES:_data key:key];
@@ -168,12 +151,13 @@
         
         NSData *data = [_data dataUsingEncoding:NSUTF8StringEncoding];
         NSData *compressedData = [ZipUtil compresszip:data];
-        _data = [[NSString alloc] initWithData:compressedData encoding:NSUTF8StringEncoding];
+        _data = [compressedData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
+    } else {
+        
+        // base64
+        NSData *tempData = [_data dataUsingEncoding:NSUTF8StringEncoding];
+        _data = [tempData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
     }
-    
-    // base64
-    NSData *tempData = [_data dataUsingEncoding:NSUTF8StringEncoding];
-    _data = [tempData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithCarriageReturn];
     
     return _data;
 }
