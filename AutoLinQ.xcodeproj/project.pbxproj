@@ -283,6 +283,11 @@
 		EC8AD1981CCB2F13009B8F64 /* Hmac.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1911CCB2F13009B8F64 /* Hmac.m */; };
 		EC8AD1991CCB2F13009B8F64 /* StringUitl.h in Headers */ = {isa = PBXBuildFile; fileRef = EC8AD1931CCB2F13009B8F64 /* StringUitl.h */; };
 		EC8AD19A1CCB2F13009B8F64 /* StringUitl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8AD1941CCB2F13009B8F64 /* StringUitl.m */; };
+		EC9432D91CE6CF3600EBEB83 /* Authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9432D71CE6CF3600EBEB83 /* Authorization.h */; };
+		EC9432DA1CE6CF3600EBEB83 /* Authorization.h in Headers */ = {isa = PBXBuildFile; fileRef = EC9432D71CE6CF3600EBEB83 /* Authorization.h */; };
+		EC9432DB1CE6CF3600EBEB83 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9432D81CE6CF3600EBEB83 /* Authorization.m */; };
+		EC9432DC1CE6CF3600EBEB83 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9432D81CE6CF3600EBEB83 /* Authorization.m */; };
+		EC9432DD1CE6CF3600EBEB83 /* Authorization.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9432D81CE6CF3600EBEB83 /* Authorization.m */; };
 		ECE2CDC31CCE4CDC0080E624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC21CCE4CDC0080E624 /* main.m */; };
 		ECE2CDC61CCE4CDC0080E624 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC51CCE4CDC0080E624 /* AppDelegate.m */; };
 		ECE2CDC91CCE4CDC0080E624 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE2CDC81CCE4CDC0080E624 /* ViewController.m */; };
@@ -655,6 +660,8 @@
 		EC8AD1911CCB2F13009B8F64 /* Hmac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hmac.m; sourceTree = "<group>"; };
 		EC8AD1931CCB2F13009B8F64 /* StringUitl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUitl.h; sourceTree = "<group>"; };
 		EC8AD1941CCB2F13009B8F64 /* StringUitl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUitl.m; sourceTree = "<group>"; };
+		EC9432D71CE6CF3600EBEB83 /* Authorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authorization.h; sourceTree = "<group>"; };
+		EC9432D81CE6CF3600EBEB83 /* Authorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authorization.m; sourceTree = "<group>"; };
 		ECE2CDBF1CCE4CDC0080E624 /* AutoLinQClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLinQClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECE2CDC21CCE4CDC0080E624 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECE2CDC41CCE4CDC0080E624 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -912,6 +919,7 @@
 		9AD10E641C96BF5000DD7555 /* comti */ = {
 			isa = PBXGroup;
 			children = (
+				EC9432D61CE6CF3600EBEB83 /* Authorization */,
 				EC0BB35E1CCB2FFF00EB7394 /* common */,
 				9AD10E651C96BF5000DD7555 /* https */,
 				9AD10E661C96BF5000DD7555 /* mqtt */,
@@ -1283,6 +1291,15 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		EC9432D61CE6CF3600EBEB83 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				EC9432D71CE6CF3600EBEB83 /* Authorization.h */,
+				EC9432D81CE6CF3600EBEB83 /* Authorization.m */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
 		ECE2CDC01CCE4CDC0080E624 /* AutoLinQClient */ = {
 			isa = PBXGroup;
 			children = (
@@ -1418,6 +1435,7 @@
 				EC0BB3C61CCB303500EB7394 /* QNHttpManager.h in Headers */,
 				EC0BB3DA1CCB303500EB7394 /* QNResumeUpload.h in Headers */,
 				9AD10D5B1C96B14C00DD7555 /* AutoLinQ.h in Headers */,
+				EC9432D91CE6CF3600EBEB83 /* Authorization.h in Headers */,
 				9AD10E441C96B1BF00DD7555 /* GeneratedMessageBuilder.h in Headers */,
 				9AD10E481C96B1BF00DD7555 /* MutableExtensionRegistry.h in Headers */,
 				EC0BB4121CCB30AA00EB7394 /* QNHijackingDetectWrapper.h in Headers */,
@@ -1444,6 +1462,7 @@
 			files = (
 				EC0BB4DC1CCB89AF00EB7394 /* AutoLinQ.h in Headers */,
 				EC0BB4DD1CCB89AF00EB7394 /* QiniuUtil.h in Headers */,
+				EC9432DA1CE6CF3600EBEB83 /* Authorization.h in Headers */,
 				EC0BB4DE1CCB89AF00EB7394 /* Message.h in Headers */,
 				EC0BB4DF1CCB89AF00EB7394 /* Payload.h in Headers */,
 				EC0BB4E01CCB89AF00EB7394 /* Des.h in Headers */,
@@ -1642,6 +1661,7 @@
 				9AD10E0A1C96B1BF00DD7555 /* logging_mosq.c in Sources */,
 				9AD10E811C96E6CC00DD7555 /* HttpClient.m in Sources */,
 				9AD10E0C1C96B1BF00DD7555 /* memory_mosq.c in Sources */,
+				EC9432DB1CE6CF3600EBEB83 /* Authorization.m in Sources */,
 				9AD10E371C96B1BF00DD7555 /* Descriptor.pb.m in Sources */,
 				9AD10E3B1C96B1BF00DD7555 /* ExtendableMessageBuilder.m in Sources */,
 				EC0BB3BA1CCB303500EB7394 /* QNFile.m in Sources */,
@@ -1725,6 +1745,7 @@
 				EC0BB4D91CCB893C00EB7394 /* ProtoBufManager.m in Sources */,
 				EC0BB4D01CCB892100EB7394 /* Message.m in Sources */,
 				EC0BB4D51CCB892D00EB7394 /* StringUitl.m in Sources */,
+				EC9432DC1CE6CF3600EBEB83 /* Authorization.m in Sources */,
 				EC0BB4D61CCB893000EB7394 /* ZipUtil.m in Sources */,
 				EC0BB4D41CCB892900EB7394 /* Hmac.m in Sources */,
 				EC0BB4D11CCB892100EB7394 /* Payload.m in Sources */,
@@ -1755,6 +1776,7 @@
 				ECE2CDE21CCE4DA50080E624 /* AFHTTPRequestOperation.m in Sources */,
 				ECE2CDE31CCE4DA50080E624 /* AFHTTPRequestOperationManager.m in Sources */,
 				ECE2CDE41CCE4DA50080E624 /* AFHTTPSessionManager.m in Sources */,
+				EC9432DD1CE6CF3600EBEB83 /* Authorization.m in Sources */,
 				ECE2CDE51CCE4DA50080E624 /* AFNetworkReachabilityManager.m in Sources */,
 				ECE2CDE61CCE4DA50080E624 /* AFSecurityPolicy.m in Sources */,
 				ECE2CDE71CCE4DA50080E624 /* AFURLConnectionOperation.m in Sources */,

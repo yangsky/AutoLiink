@@ -6,15 +6,15 @@
 @implementation ContiMessageRoot
 static PBExtensionRegistry* extensionRegistry = nil;
 + (PBExtensionRegistry*) extensionRegistry {
-  return extensionRegistry;
+    return extensionRegistry;
 }
 
 + (void) initialize {
-  if (self == [ContiMessageRoot class]) {
-    PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
-    [self registerAllExtensions:registry];
-    extensionRegistry = registry;
-  }
+    if (self == [ContiMessageRoot class]) {
+        PBMutableExtensionRegistry* registry = [PBMutableExtensionRegistry registry];
+        [self registerAllExtensions:registry];
+        extensionRegistry = registry;
+    }
 }
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry {
 }
@@ -27,437 +27,437 @@ static PBExtensionRegistry* extensionRegistry = nil;
 @property (strong) NSString* appVersion;
 @property (strong) NSString* timeStamp;
 @property (strong) NSString* token;
+@property (strong, getter=getData) NSString* data;
 @property (strong) NSString* pkgId;
 @property SInt32 pkgIndex;
 @property SInt32 pkgNum;
-@property SInt32 isencryption;
-@property SInt32 iscompress;
-@property (strong) NSString* dataStr;
+@property SInt32 isEncryption;
+@property SInt32 isCompress;
 @end
 
 @implementation ContiMessage
 
 - (BOOL) hasAppId {
-  return !!hasAppId_;
+    return !!hasAppId_;
 }
 - (void) setHasAppId:(BOOL) _value_ {
-  hasAppId_ = !!_value_;
+    hasAppId_ = !!_value_;
 }
 @synthesize appId;
 - (BOOL) hasCategoryId {
-  return !!hasCategoryId_;
+    return !!hasCategoryId_;
 }
 - (void) setHasCategoryId:(BOOL) _value_ {
-  hasCategoryId_ = !!_value_;
+    hasCategoryId_ = !!_value_;
 }
 @synthesize categoryId;
 - (BOOL) hasFuncId {
-  return !!hasFuncId_;
+    return !!hasFuncId_;
 }
 - (void) setHasFuncId:(BOOL) _value_ {
-  hasFuncId_ = !!_value_;
+    hasFuncId_ = !!_value_;
 }
 @synthesize funcId;
 - (BOOL) hasAppVersion {
-  return !!hasAppVersion_;
+    return !!hasAppVersion_;
 }
 - (void) setHasAppVersion:(BOOL) _value_ {
-  hasAppVersion_ = !!_value_;
+    hasAppVersion_ = !!_value_;
 }
 @synthesize appVersion;
 - (BOOL) hasTimeStamp {
-  return !!hasTimeStamp_;
+    return !!hasTimeStamp_;
 }
 - (void) setHasTimeStamp:(BOOL) _value_ {
-  hasTimeStamp_ = !!_value_;
+    hasTimeStamp_ = !!_value_;
 }
 @synthesize timeStamp;
 - (BOOL) hasToken {
-  return !!hasToken_;
+    return !!hasToken_;
 }
 - (void) setHasToken:(BOOL) _value_ {
-  hasToken_ = !!_value_;
+    hasToken_ = !!_value_;
 }
 @synthesize token;
+- (BOOL) hasData {
+    return !!hasData_;
+}
+- (void) setHasData:(BOOL) _value_ {
+    hasData_ = !!_value_;
+}
+@synthesize data;
 - (BOOL) hasPkgId {
-  return !!hasPkgId_;
+    return !!hasPkgId_;
 }
 - (void) setHasPkgId:(BOOL) _value_ {
-  hasPkgId_ = !!_value_;
+    hasPkgId_ = !!_value_;
 }
 @synthesize pkgId;
 - (BOOL) hasPkgIndex {
-  return !!hasPkgIndex_;
+    return !!hasPkgIndex_;
 }
 - (void) setHasPkgIndex:(BOOL) _value_ {
-  hasPkgIndex_ = !!_value_;
+    hasPkgIndex_ = !!_value_;
 }
 @synthesize pkgIndex;
 - (BOOL) hasPkgNum {
-  return !!hasPkgNum_;
+    return !!hasPkgNum_;
 }
 - (void) setHasPkgNum:(BOOL) _value_ {
-  hasPkgNum_ = !!_value_;
+    hasPkgNum_ = !!_value_;
 }
 @synthesize pkgNum;
-- (BOOL) hasIsencryption {
-  return !!hasIsencryption_;
+- (BOOL) hasIsEncryption {
+    return !!hasIsEncryption_;
 }
-- (void) setHasIsencryption:(BOOL) _value_ {
-  hasIsencryption_ = !!_value_;
+- (void) setHasIsEncryption:(BOOL) _value_ {
+    hasIsEncryption_ = !!_value_;
 }
-@synthesize isencryption;
-- (BOOL) hasIscompress {
-  return !!hasIscompress_;
+@synthesize isEncryption;
+- (BOOL) hasIsCompress {
+    return !!hasIsCompress_;
 }
-- (void) setHasIscompress:(BOOL) _value_ {
-  hasIscompress_ = !!_value_;
+- (void) setHasIsCompress:(BOOL) _value_ {
+    hasIsCompress_ = !!_value_;
 }
-@synthesize iscompress;
-- (BOOL) hasDataStr {
-  return !!hasDataStr_;
-}
-- (void) setHasDataStr:(BOOL) _value_ {
-  hasDataStr_ = !!_value_;
-}
-@synthesize dataStr;
+@synthesize isCompress;
 - (instancetype) init {
-  if ((self = [super init])) {
-    self.appId = @"";
-    self.categoryId = @"";
-    self.funcId = @"";
-    self.appVersion = @"";
-    self.timeStamp = @"";
-    self.token = @"";
-    self.pkgId = @"";
-    self.pkgIndex = 0;
-    self.pkgNum = 0;
-    self.isencryption = 0;
-    self.iscompress = 0;
-    self.dataStr = @"";
-  }
-  return self;
+    if ((self = [super init])) {
+        self.appId = @"";
+        self.categoryId = @"";
+        self.funcId = @"";
+        self.appVersion = @"";
+        self.timeStamp = @"";
+        self.token = @"";
+        self.data = @"";
+        self.pkgId = @"";
+        self.pkgIndex = 0;
+        self.pkgNum = 0;
+        self.isEncryption = 0;
+        self.isCompress = 0;
+    }
+    return self;
 }
 static ContiMessage* defaultContiMessageInstance = nil;
 + (void) initialize {
-  if (self == [ContiMessage class]) {
-    defaultContiMessageInstance = [[ContiMessage alloc] init];
-  }
+    if (self == [ContiMessage class]) {
+        defaultContiMessageInstance = [[ContiMessage alloc] init];
+    }
 }
 + (instancetype) defaultInstance {
-  return defaultContiMessageInstance;
+    return defaultContiMessageInstance;
 }
 - (instancetype) defaultInstance {
-  return defaultContiMessageInstance;
+    return defaultContiMessageInstance;
 }
 - (BOOL) isInitialized {
-  if (!self.hasAppId) {
-    return NO;
-  }
-  if (!self.hasCategoryId) {
-    return NO;
-  }
-  if (!self.hasFuncId) {
-    return NO;
-  }
-  if (!self.hasAppVersion) {
-    return NO;
-  }
-  if (!self.hasTimeStamp) {
-    return NO;
-  }
-  if (!self.hasToken) {
-    return NO;
-  }
-  if (!self.hasPkgId) {
-    return NO;
-  }
-  if (!self.hasPkgIndex) {
-    return NO;
-  }
-  if (!self.hasPkgNum) {
-    return NO;
-  }
-  if (!self.hasIsencryption) {
-    return NO;
-  }
-  if (!self.hasIscompress) {
-    return NO;
-  }
-  if (!self.hasDataStr) {
-    return NO;
-  }
-  return YES;
+    if (!self.hasAppId) {
+        return NO;
+    }
+    if (!self.hasCategoryId) {
+        return NO;
+    }
+    if (!self.hasFuncId) {
+        return NO;
+    }
+    if (!self.hasAppVersion) {
+        return NO;
+    }
+    if (!self.hasTimeStamp) {
+        return NO;
+    }
+    if (!self.hasToken) {
+        return NO;
+    }
+    if (!self.hasData) {
+        return NO;
+    }
+    if (!self.hasPkgId) {
+        return NO;
+    }
+    if (!self.hasPkgIndex) {
+        return NO;
+    }
+    if (!self.hasPkgNum) {
+        return NO;
+    }
+    if (!self.hasIsEncryption) {
+        return NO;
+    }
+    if (!self.hasIsCompress) {
+        return NO;
+    }
+    return YES;
 }
 - (void) writeToCodedOutputStream:(PBCodedOutputStream*) output {
-  if (self.hasAppId) {
-    [output writeString:1 value:self.appId];
-  }
-  if (self.hasCategoryId) {
-    [output writeString:2 value:self.categoryId];
-  }
-  if (self.hasFuncId) {
-    [output writeString:3 value:self.funcId];
-  }
-  if (self.hasAppVersion) {
-    [output writeString:4 value:self.appVersion];
-  }
-  if (self.hasTimeStamp) {
-    [output writeString:5 value:self.timeStamp];
-  }
-  if (self.hasToken) {
-    [output writeString:6 value:self.token];
-  }
-  if (self.hasPkgId) {
-    [output writeString:7 value:self.pkgId];
-  }
-  if (self.hasPkgIndex) {
-    [output writeInt32:8 value:self.pkgIndex];
-  }
-  if (self.hasPkgNum) {
-    [output writeInt32:9 value:self.pkgNum];
-  }
-  if (self.hasIsencryption) {
-    [output writeInt32:10 value:self.isencryption];
-  }
-  if (self.hasIscompress) {
-    [output writeInt32:11 value:self.iscompress];
-  }
-  if (self.hasDataStr) {
-    [output writeString:12 value:self.dataStr];
-  }
-  [self.unknownFields writeToCodedOutputStream:output];
+    if (self.hasAppId) {
+        [output writeString:1 value:self.appId];
+    }
+    if (self.hasCategoryId) {
+        [output writeString:2 value:self.categoryId];
+    }
+    if (self.hasFuncId) {
+        [output writeString:3 value:self.funcId];
+    }
+    if (self.hasAppVersion) {
+        [output writeString:4 value:self.appVersion];
+    }
+    if (self.hasTimeStamp) {
+        [output writeString:5 value:self.timeStamp];
+    }
+    if (self.hasToken) {
+        [output writeString:6 value:self.token];
+    }
+    if (self.hasData) {
+        [output writeString:7 value:self.data];
+    }
+    if (self.hasPkgId) {
+        [output writeString:8 value:self.pkgId];
+    }
+    if (self.hasPkgIndex) {
+        [output writeInt32:9 value:self.pkgIndex];
+    }
+    if (self.hasPkgNum) {
+        [output writeInt32:10 value:self.pkgNum];
+    }
+    if (self.hasIsEncryption) {
+        [output writeInt32:11 value:self.isEncryption];
+    }
+    if (self.hasIsCompress) {
+        [output writeInt32:12 value:self.isCompress];
+    }
+    [self.unknownFields writeToCodedOutputStream:output];
 }
 - (SInt32) serializedSize {
-  __block SInt32 size_ = memoizedSerializedSize;
-  if (size_ != -1) {
+    __block SInt32 size_ = memoizedSerializedSize;
+    if (size_ != -1) {
+        return size_;
+    }
+    
+    size_ = 0;
+    if (self.hasAppId) {
+        size_ += computeStringSize(1, self.appId);
+    }
+    if (self.hasCategoryId) {
+        size_ += computeStringSize(2, self.categoryId);
+    }
+    if (self.hasFuncId) {
+        size_ += computeStringSize(3, self.funcId);
+    }
+    if (self.hasAppVersion) {
+        size_ += computeStringSize(4, self.appVersion);
+    }
+    if (self.hasTimeStamp) {
+        size_ += computeStringSize(5, self.timeStamp);
+    }
+    if (self.hasToken) {
+        size_ += computeStringSize(6, self.token);
+    }
+    if (self.hasData) {
+        size_ += computeStringSize(7, self.data);
+    }
+    if (self.hasPkgId) {
+        size_ += computeStringSize(8, self.pkgId);
+    }
+    if (self.hasPkgIndex) {
+        size_ += computeInt32Size(9, self.pkgIndex);
+    }
+    if (self.hasPkgNum) {
+        size_ += computeInt32Size(10, self.pkgNum);
+    }
+    if (self.hasIsEncryption) {
+        size_ += computeInt32Size(11, self.isEncryption);
+    }
+    if (self.hasIsCompress) {
+        size_ += computeInt32Size(12, self.isCompress);
+    }
+    size_ += self.unknownFields.serializedSize;
+    memoizedSerializedSize = size_;
     return size_;
-  }
-
-  size_ = 0;
-  if (self.hasAppId) {
-    size_ += computeStringSize(1, self.appId);
-  }
-  if (self.hasCategoryId) {
-    size_ += computeStringSize(2, self.categoryId);
-  }
-  if (self.hasFuncId) {
-    size_ += computeStringSize(3, self.funcId);
-  }
-  if (self.hasAppVersion) {
-    size_ += computeStringSize(4, self.appVersion);
-  }
-  if (self.hasTimeStamp) {
-    size_ += computeStringSize(5, self.timeStamp);
-  }
-  if (self.hasToken) {
-    size_ += computeStringSize(6, self.token);
-  }
-  if (self.hasPkgId) {
-    size_ += computeStringSize(7, self.pkgId);
-  }
-  if (self.hasPkgIndex) {
-    size_ += computeInt32Size(8, self.pkgIndex);
-  }
-  if (self.hasPkgNum) {
-    size_ += computeInt32Size(9, self.pkgNum);
-  }
-  if (self.hasIsencryption) {
-    size_ += computeInt32Size(10, self.isencryption);
-  }
-  if (self.hasIscompress) {
-    size_ += computeInt32Size(11, self.iscompress);
-  }
-  if (self.hasDataStr) {
-    size_ += computeStringSize(12, self.dataStr);
-  }
-  size_ += self.unknownFields.serializedSize;
-  memoizedSerializedSize = size_;
-  return size_;
 }
 + (ContiMessage*) parseFromData:(NSData*) data {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromData:data] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromData:data] build];
 }
 + (ContiMessage*) parseFromData:(NSData*) data extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromData:data extensionRegistry:extensionRegistry] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromData:data extensionRegistry:extensionRegistry] build];
 }
 + (ContiMessage*) parseFromInputStream:(NSInputStream*) input {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromInputStream:input] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromInputStream:input] build];
 }
 + (ContiMessage*) parseFromInputStream:(NSInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromInputStream:input extensionRegistry:extensionRegistry] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ContiMessage*) parseFromCodedInputStream:(PBCodedInputStream*) input {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromCodedInputStream:input] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromCodedInputStream:input] build];
 }
 + (ContiMessage*) parseFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
-  return (ContiMessage*)[[[ContiMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
+    return (ContiMessage*)[[[ContiMessage builder] mergeFromCodedInputStream:input extensionRegistry:extensionRegistry] build];
 }
 + (ContiMessageBuilder*) builder {
-  return [[ContiMessageBuilder alloc] init];
+    return [[ContiMessageBuilder alloc] init];
 }
 + (ContiMessageBuilder*) builderWithPrototype:(ContiMessage*) prototype {
-  return [[ContiMessage builder] mergeFrom:prototype];
+    return [[ContiMessage builder] mergeFrom:prototype];
 }
 - (ContiMessageBuilder*) builder {
-  return [ContiMessage builder];
+    return [ContiMessage builder];
 }
 - (ContiMessageBuilder*) toBuilder {
-  return [ContiMessage builderWithPrototype:self];
+    return [ContiMessage builderWithPrototype:self];
 }
 - (void) writeDescriptionTo:(NSMutableString*) output withIndent:(NSString*) indent {
-  if (self.hasAppId) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"appId", self.appId];
-  }
-  if (self.hasCategoryId) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"categoryId", self.categoryId];
-  }
-  if (self.hasFuncId) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"funcId", self.funcId];
-  }
-  if (self.hasAppVersion) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"appVersion", self.appVersion];
-  }
-  if (self.hasTimeStamp) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"timeStamp", self.timeStamp];
-  }
-  if (self.hasToken) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"token", self.token];
-  }
-  if (self.hasPkgId) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"pkgId", self.pkgId];
-  }
-  if (self.hasPkgIndex) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"pkgIndex", [NSNumber numberWithInteger:self.pkgIndex]];
-  }
-  if (self.hasPkgNum) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"pkgNum", [NSNumber numberWithInteger:self.pkgNum]];
-  }
-  if (self.hasIsencryption) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"isencryption", [NSNumber numberWithInteger:self.isencryption]];
-  }
-  if (self.hasIscompress) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"iscompress", [NSNumber numberWithInteger:self.iscompress]];
-  }
-  if (self.hasDataStr) {
-    [output appendFormat:@"%@%@: %@\n", indent, @"dataStr", self.dataStr];
-  }
-  [self.unknownFields writeDescriptionTo:output withIndent:indent];
+    if (self.hasAppId) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"appId", self.appId];
+    }
+    if (self.hasCategoryId) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"categoryId", self.categoryId];
+    }
+    if (self.hasFuncId) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"funcId", self.funcId];
+    }
+    if (self.hasAppVersion) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"appVersion", self.appVersion];
+    }
+    if (self.hasTimeStamp) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"timeStamp", self.timeStamp];
+    }
+    if (self.hasToken) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"token", self.token];
+    }
+    if (self.hasData) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"data", self.data];
+    }
+    if (self.hasPkgId) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"pkgId", self.pkgId];
+    }
+    if (self.hasPkgIndex) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"pkgIndex", [NSNumber numberWithInteger:self.pkgIndex]];
+    }
+    if (self.hasPkgNum) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"pkgNum", [NSNumber numberWithInteger:self.pkgNum]];
+    }
+    if (self.hasIsEncryption) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"isEncryption", [NSNumber numberWithInteger:self.isEncryption]];
+    }
+    if (self.hasIsCompress) {
+        [output appendFormat:@"%@%@: %@\n", indent, @"isCompress", [NSNumber numberWithInteger:self.isCompress]];
+    }
+    [self.unknownFields writeDescriptionTo:output withIndent:indent];
 }
 - (void) storeInDictionary:(NSMutableDictionary *)dictionary {
-  if (self.hasAppId) {
-    [dictionary setObject: self.appId forKey: @"appId"];
-  }
-  if (self.hasCategoryId) {
-    [dictionary setObject: self.categoryId forKey: @"categoryId"];
-  }
-  if (self.hasFuncId) {
-    [dictionary setObject: self.funcId forKey: @"funcId"];
-  }
-  if (self.hasAppVersion) {
-    [dictionary setObject: self.appVersion forKey: @"appVersion"];
-  }
-  if (self.hasTimeStamp) {
-    [dictionary setObject: self.timeStamp forKey: @"timeStamp"];
-  }
-  if (self.hasToken) {
-    [dictionary setObject: self.token forKey: @"token"];
-  }
-  if (self.hasPkgId) {
-    [dictionary setObject: self.pkgId forKey: @"pkgId"];
-  }
-  if (self.hasPkgIndex) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.pkgIndex] forKey: @"pkgIndex"];
-  }
-  if (self.hasPkgNum) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.pkgNum] forKey: @"pkgNum"];
-  }
-  if (self.hasIsencryption) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.isencryption] forKey: @"isencryption"];
-  }
-  if (self.hasIscompress) {
-    [dictionary setObject: [NSNumber numberWithInteger:self.iscompress] forKey: @"iscompress"];
-  }
-  if (self.hasDataStr) {
-    [dictionary setObject: self.dataStr forKey: @"dataStr"];
-  }
-  [self.unknownFields storeInDictionary:dictionary];
+    if (self.hasAppId) {
+        [dictionary setObject: self.appId forKey: @"appId"];
+    }
+    if (self.hasCategoryId) {
+        [dictionary setObject: self.categoryId forKey: @"categoryId"];
+    }
+    if (self.hasFuncId) {
+        [dictionary setObject: self.funcId forKey: @"funcId"];
+    }
+    if (self.hasAppVersion) {
+        [dictionary setObject: self.appVersion forKey: @"appVersion"];
+    }
+    if (self.hasTimeStamp) {
+        [dictionary setObject: self.timeStamp forKey: @"timeStamp"];
+    }
+    if (self.hasToken) {
+        [dictionary setObject: self.token forKey: @"token"];
+    }
+    if (self.hasData) {
+        [dictionary setObject: self.data forKey: @"data"];
+    }
+    if (self.hasPkgId) {
+        [dictionary setObject: self.pkgId forKey: @"pkgId"];
+    }
+    if (self.hasPkgIndex) {
+        [dictionary setObject: [NSNumber numberWithInteger:self.pkgIndex] forKey: @"pkgIndex"];
+    }
+    if (self.hasPkgNum) {
+        [dictionary setObject: [NSNumber numberWithInteger:self.pkgNum] forKey: @"pkgNum"];
+    }
+    if (self.hasIsEncryption) {
+        [dictionary setObject: [NSNumber numberWithInteger:self.isEncryption] forKey: @"isEncryption"];
+    }
+    if (self.hasIsCompress) {
+        [dictionary setObject: [NSNumber numberWithInteger:self.isCompress] forKey: @"isCompress"];
+    }
+    [self.unknownFields storeInDictionary:dictionary];
 }
 - (BOOL) isEqual:(id)other {
-  if (other == self) {
-    return YES;
-  }
-  if (![other isKindOfClass:[ContiMessage class]]) {
-    return NO;
-  }
-  ContiMessage *otherMessage = other;
-  return
-      self.hasAppId == otherMessage.hasAppId &&
-      (!self.hasAppId || [self.appId isEqual:otherMessage.appId]) &&
-      self.hasCategoryId == otherMessage.hasCategoryId &&
-      (!self.hasCategoryId || [self.categoryId isEqual:otherMessage.categoryId]) &&
-      self.hasFuncId == otherMessage.hasFuncId &&
-      (!self.hasFuncId || [self.funcId isEqual:otherMessage.funcId]) &&
-      self.hasAppVersion == otherMessage.hasAppVersion &&
-      (!self.hasAppVersion || [self.appVersion isEqual:otherMessage.appVersion]) &&
-      self.hasTimeStamp == otherMessage.hasTimeStamp &&
-      (!self.hasTimeStamp || [self.timeStamp isEqual:otherMessage.timeStamp]) &&
-      self.hasToken == otherMessage.hasToken &&
-      (!self.hasToken || [self.token isEqual:otherMessage.token]) &&
-      self.hasPkgId == otherMessage.hasPkgId &&
-      (!self.hasPkgId || [self.pkgId isEqual:otherMessage.pkgId]) &&
-      self.hasPkgIndex == otherMessage.hasPkgIndex &&
-      (!self.hasPkgIndex || self.pkgIndex == otherMessage.pkgIndex) &&
-      self.hasPkgNum == otherMessage.hasPkgNum &&
-      (!self.hasPkgNum || self.pkgNum == otherMessage.pkgNum) &&
-      self.hasIsencryption == otherMessage.hasIsencryption &&
-      (!self.hasIsencryption || self.isencryption == otherMessage.isencryption) &&
-      self.hasIscompress == otherMessage.hasIscompress &&
-      (!self.hasIscompress || self.iscompress == otherMessage.iscompress) &&
-      self.hasDataStr == otherMessage.hasDataStr &&
-      (!self.hasDataStr || [self.dataStr isEqual:otherMessage.dataStr]) &&
-      (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
+    if (other == self) {
+        return YES;
+    }
+    if (![other isKindOfClass:[ContiMessage class]]) {
+        return NO;
+    }
+    ContiMessage *otherMessage = other;
+    return
+    self.hasAppId == otherMessage.hasAppId &&
+    (!self.hasAppId || [self.appId isEqual:otherMessage.appId]) &&
+    self.hasCategoryId == otherMessage.hasCategoryId &&
+    (!self.hasCategoryId || [self.categoryId isEqual:otherMessage.categoryId]) &&
+    self.hasFuncId == otherMessage.hasFuncId &&
+    (!self.hasFuncId || [self.funcId isEqual:otherMessage.funcId]) &&
+    self.hasAppVersion == otherMessage.hasAppVersion &&
+    (!self.hasAppVersion || [self.appVersion isEqual:otherMessage.appVersion]) &&
+    self.hasTimeStamp == otherMessage.hasTimeStamp &&
+    (!self.hasTimeStamp || [self.timeStamp isEqual:otherMessage.timeStamp]) &&
+    self.hasToken == otherMessage.hasToken &&
+    (!self.hasToken || [self.token isEqual:otherMessage.token]) &&
+    self.hasData == otherMessage.hasData &&
+    (!self.hasData || [self.data isEqual:otherMessage.data]) &&
+    self.hasPkgId == otherMessage.hasPkgId &&
+    (!self.hasPkgId || [self.pkgId isEqual:otherMessage.pkgId]) &&
+    self.hasPkgIndex == otherMessage.hasPkgIndex &&
+    (!self.hasPkgIndex || self.pkgIndex == otherMessage.pkgIndex) &&
+    self.hasPkgNum == otherMessage.hasPkgNum &&
+    (!self.hasPkgNum || self.pkgNum == otherMessage.pkgNum) &&
+    self.hasIsEncryption == otherMessage.hasIsEncryption &&
+    (!self.hasIsEncryption || self.isEncryption == otherMessage.isEncryption) &&
+    self.hasIsCompress == otherMessage.hasIsCompress &&
+    (!self.hasIsCompress || self.isCompress == otherMessage.isCompress) &&
+    (self.unknownFields == otherMessage.unknownFields || (self.unknownFields != nil && [self.unknownFields isEqual:otherMessage.unknownFields]));
 }
 - (NSUInteger) hash {
-  __block NSUInteger hashCode = 7;
-  if (self.hasAppId) {
-    hashCode = hashCode * 31 + [self.appId hash];
-  }
-  if (self.hasCategoryId) {
-    hashCode = hashCode * 31 + [self.categoryId hash];
-  }
-  if (self.hasFuncId) {
-    hashCode = hashCode * 31 + [self.funcId hash];
-  }
-  if (self.hasAppVersion) {
-    hashCode = hashCode * 31 + [self.appVersion hash];
-  }
-  if (self.hasTimeStamp) {
-    hashCode = hashCode * 31 + [self.timeStamp hash];
-  }
-  if (self.hasToken) {
-    hashCode = hashCode * 31 + [self.token hash];
-  }
-  if (self.hasPkgId) {
-    hashCode = hashCode * 31 + [self.pkgId hash];
-  }
-  if (self.hasPkgIndex) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.pkgIndex] hash];
-  }
-  if (self.hasPkgNum) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.pkgNum] hash];
-  }
-  if (self.hasIsencryption) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isencryption] hash];
-  }
-  if (self.hasIscompress) {
-    hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.iscompress] hash];
-  }
-  if (self.hasDataStr) {
-    hashCode = hashCode * 31 + [self.dataStr hash];
-  }
-  hashCode = hashCode * 31 + [self.unknownFields hash];
-  return hashCode;
+    __block NSUInteger hashCode = 7;
+    if (self.hasAppId) {
+        hashCode = hashCode * 31 + [self.appId hash];
+    }
+    if (self.hasCategoryId) {
+        hashCode = hashCode * 31 + [self.categoryId hash];
+    }
+    if (self.hasFuncId) {
+        hashCode = hashCode * 31 + [self.funcId hash];
+    }
+    if (self.hasAppVersion) {
+        hashCode = hashCode * 31 + [self.appVersion hash];
+    }
+    if (self.hasTimeStamp) {
+        hashCode = hashCode * 31 + [self.timeStamp hash];
+    }
+    if (self.hasToken) {
+        hashCode = hashCode * 31 + [self.token hash];
+    }
+    if (self.hasData) {
+        hashCode = hashCode * 31 + [self.data hash];
+    }
+    if (self.hasPkgId) {
+        hashCode = hashCode * 31 + [self.pkgId hash];
+    }
+    if (self.hasPkgIndex) {
+        hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.pkgIndex] hash];
+    }
+    if (self.hasPkgNum) {
+        hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.pkgNum] hash];
+    }
+    if (self.hasIsEncryption) {
+        hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isEncryption] hash];
+    }
+    if (self.hasIsCompress) {
+        hashCode = hashCode * 31 + [[NSNumber numberWithInteger:self.isCompress] hash];
+    }
+    hashCode = hashCode * 31 + [self.unknownFields hash];
+    return hashCode;
 }
 @end
 
@@ -468,336 +468,336 @@ static ContiMessage* defaultContiMessageInstance = nil;
 @implementation ContiMessageBuilder
 @synthesize resultContiMessage;
 - (instancetype) init {
-  if ((self = [super init])) {
-    self.resultContiMessage = [[ContiMessage alloc] init];
-  }
-  return self;
+    if ((self = [super init])) {
+        self.resultContiMessage = [[ContiMessage alloc] init];
+    }
+    return self;
 }
 - (PBGeneratedMessage*) internalGetResult {
-  return resultContiMessage;
+    return resultContiMessage;
 }
 - (ContiMessageBuilder*) clear {
-  self.resultContiMessage = [[ContiMessage alloc] init];
-  return self;
+    self.resultContiMessage = [[ContiMessage alloc] init];
+    return self;
 }
 - (ContiMessageBuilder*) clone {
-  return [ContiMessage builderWithPrototype:resultContiMessage];
+    return [ContiMessage builderWithPrototype:resultContiMessage];
 }
 - (ContiMessage*) defaultInstance {
-  return [ContiMessage defaultInstance];
+    return [ContiMessage defaultInstance];
 }
 - (ContiMessage*) build {
-  [self checkInitialized];
-  return [self buildPartial];
+    [self checkInitialized];
+    return [self buildPartial];
 }
 - (ContiMessage*) buildPartial {
-  ContiMessage* returnMe = resultContiMessage;
-  self.resultContiMessage = nil;
-  return returnMe;
+    ContiMessage* returnMe = resultContiMessage;
+    self.resultContiMessage = nil;
+    return returnMe;
 }
 - (ContiMessageBuilder*) mergeFrom:(ContiMessage*) other {
-  if (other == [ContiMessage defaultInstance]) {
+    if (other == [ContiMessage defaultInstance]) {
+        return self;
+    }
+    if (other.hasAppId) {
+        [self setAppId:other.appId];
+    }
+    if (other.hasCategoryId) {
+        [self setCategoryId:other.categoryId];
+    }
+    if (other.hasFuncId) {
+        [self setFuncId:other.funcId];
+    }
+    if (other.hasAppVersion) {
+        [self setAppVersion:other.appVersion];
+    }
+    if (other.hasTimeStamp) {
+        [self setTimeStamp:other.timeStamp];
+    }
+    if (other.hasToken) {
+        [self setToken:other.token];
+    }
+    if (other.hasData) {
+        [self setData:other.data];
+    }
+    if (other.hasPkgId) {
+        [self setPkgId:other.pkgId];
+    }
+    if (other.hasPkgIndex) {
+        [self setPkgIndex:other.pkgIndex];
+    }
+    if (other.hasPkgNum) {
+        [self setPkgNum:other.pkgNum];
+    }
+    if (other.hasIsEncryption) {
+        [self setIsEncryption:other.isEncryption];
+    }
+    if (other.hasIsCompress) {
+        [self setIsCompress:other.isCompress];
+    }
+    [self mergeUnknownFields:other.unknownFields];
     return self;
-  }
-  if (other.hasAppId) {
-    [self setAppId:other.appId];
-  }
-  if (other.hasCategoryId) {
-    [self setCategoryId:other.categoryId];
-  }
-  if (other.hasFuncId) {
-    [self setFuncId:other.funcId];
-  }
-  if (other.hasAppVersion) {
-    [self setAppVersion:other.appVersion];
-  }
-  if (other.hasTimeStamp) {
-    [self setTimeStamp:other.timeStamp];
-  }
-  if (other.hasToken) {
-    [self setToken:other.token];
-  }
-  if (other.hasPkgId) {
-    [self setPkgId:other.pkgId];
-  }
-  if (other.hasPkgIndex) {
-    [self setPkgIndex:other.pkgIndex];
-  }
-  if (other.hasPkgNum) {
-    [self setPkgNum:other.pkgNum];
-  }
-  if (other.hasIsencryption) {
-    [self setIsencryption:other.isencryption];
-  }
-  if (other.hasIscompress) {
-    [self setIscompress:other.iscompress];
-  }
-  if (other.hasDataStr) {
-    [self setDataStr:other.dataStr];
-  }
-  [self mergeUnknownFields:other.unknownFields];
-  return self;
 }
 - (ContiMessageBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input {
-  return [self mergeFromCodedInputStream:input extensionRegistry:[PBExtensionRegistry emptyRegistry]];
+    return [self mergeFromCodedInputStream:input extensionRegistry:[PBExtensionRegistry emptyRegistry]];
 }
 - (ContiMessageBuilder*) mergeFromCodedInputStream:(PBCodedInputStream*) input extensionRegistry:(PBExtensionRegistry*) extensionRegistry {
-  PBUnknownFieldSetBuilder* unknownFields = [PBUnknownFieldSet builderWithUnknownFields:self.unknownFields];
-  while (YES) {
-    SInt32 tag = [input readTag];
-    switch (tag) {
-      case 0:
-        [self setUnknownFields:[unknownFields build]];
-        return self;
-      default: {
-        if (![self parseUnknownField:input unknownFields:unknownFields extensionRegistry:extensionRegistry tag:tag]) {
-          [self setUnknownFields:[unknownFields build]];
-          return self;
+    PBUnknownFieldSetBuilder* unknownFields = [PBUnknownFieldSet builderWithUnknownFields:self.unknownFields];
+    while (YES) {
+        SInt32 tag = [input readTag];
+        switch (tag) {
+            case 0:
+                [self setUnknownFields:[unknownFields build]];
+                return self;
+            default: {
+                if (![self parseUnknownField:input unknownFields:unknownFields extensionRegistry:extensionRegistry tag:tag]) {
+                    [self setUnknownFields:[unknownFields build]];
+                    return self;
+                }
+                break;
+            }
+            case 10: {
+                [self setAppId:[input readString]];
+                break;
+            }
+            case 18: {
+                [self setCategoryId:[input readString]];
+                break;
+            }
+            case 26: {
+                [self setFuncId:[input readString]];
+                break;
+            }
+            case 34: {
+                [self setAppVersion:[input readString]];
+                break;
+            }
+            case 42: {
+                [self setTimeStamp:[input readString]];
+                break;
+            }
+            case 50: {
+                [self setToken:[input readString]];
+                break;
+            }
+            case 58: {
+                [self setData:[input readString]];
+                break;
+            }
+            case 66: {
+                [self setPkgId:[input readString]];
+                break;
+            }
+            case 72: {
+                [self setPkgIndex:[input readInt32]];
+                break;
+            }
+            case 80: {
+                [self setPkgNum:[input readInt32]];
+                break;
+            }
+            case 88: {
+                [self setIsEncryption:[input readInt32]];
+                break;
+            }
+            case 96: {
+                [self setIsCompress:[input readInt32]];
+                break;
+            }
         }
-        break;
-      }
-      case 10: {
-        [self setAppId:[input readString]];
-        break;
-      }
-      case 18: {
-        [self setCategoryId:[input readString]];
-        break;
-      }
-      case 26: {
-        [self setFuncId:[input readString]];
-        break;
-      }
-      case 34: {
-        [self setAppVersion:[input readString]];
-        break;
-      }
-      case 42: {
-        [self setTimeStamp:[input readString]];
-        break;
-      }
-      case 50: {
-        [self setToken:[input readString]];
-        break;
-      }
-      case 58: {
-        [self setPkgId:[input readString]];
-        break;
-      }
-      case 64: {
-        [self setPkgIndex:[input readInt32]];
-        break;
-      }
-      case 72: {
-        [self setPkgNum:[input readInt32]];
-        break;
-      }
-      case 80: {
-        [self setIsencryption:[input readInt32]];
-        break;
-      }
-      case 88: {
-        [self setIscompress:[input readInt32]];
-        break;
-      }
-      case 98: {
-        [self setDataStr:[input readString]];
-        break;
-      }
     }
-  }
 }
 - (BOOL) hasAppId {
-  return resultContiMessage.hasAppId;
+    return resultContiMessage.hasAppId;
 }
 - (NSString*) appId {
-  return resultContiMessage.appId;
+    return resultContiMessage.appId;
 }
 - (ContiMessageBuilder*) setAppId:(NSString*) value {
-  resultContiMessage.hasAppId = YES;
-  resultContiMessage.appId = value;
-  return self;
+    resultContiMessage.hasAppId = YES;
+    resultContiMessage.appId = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearAppId {
-  resultContiMessage.hasAppId = NO;
-  resultContiMessage.appId = @"";
-  return self;
+    resultContiMessage.hasAppId = NO;
+    resultContiMessage.appId = @"";
+    return self;
 }
 - (BOOL) hasCategoryId {
-  return resultContiMessage.hasCategoryId;
+    return resultContiMessage.hasCategoryId;
 }
 - (NSString*) categoryId {
-  return resultContiMessage.categoryId;
+    return resultContiMessage.categoryId;
 }
 - (ContiMessageBuilder*) setCategoryId:(NSString*) value {
-  resultContiMessage.hasCategoryId = YES;
-  resultContiMessage.categoryId = value;
-  return self;
+    resultContiMessage.hasCategoryId = YES;
+    resultContiMessage.categoryId = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearCategoryId {
-  resultContiMessage.hasCategoryId = NO;
-  resultContiMessage.categoryId = @"";
-  return self;
+    resultContiMessage.hasCategoryId = NO;
+    resultContiMessage.categoryId = @"";
+    return self;
 }
 - (BOOL) hasFuncId {
-  return resultContiMessage.hasFuncId;
+    return resultContiMessage.hasFuncId;
 }
 - (NSString*) funcId {
-  return resultContiMessage.funcId;
+    return resultContiMessage.funcId;
 }
 - (ContiMessageBuilder*) setFuncId:(NSString*) value {
-  resultContiMessage.hasFuncId = YES;
-  resultContiMessage.funcId = value;
-  return self;
+    resultContiMessage.hasFuncId = YES;
+    resultContiMessage.funcId = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearFuncId {
-  resultContiMessage.hasFuncId = NO;
-  resultContiMessage.funcId = @"";
-  return self;
+    resultContiMessage.hasFuncId = NO;
+    resultContiMessage.funcId = @"";
+    return self;
 }
 - (BOOL) hasAppVersion {
-  return resultContiMessage.hasAppVersion;
+    return resultContiMessage.hasAppVersion;
 }
 - (NSString*) appVersion {
-  return resultContiMessage.appVersion;
+    return resultContiMessage.appVersion;
 }
 - (ContiMessageBuilder*) setAppVersion:(NSString*) value {
-  resultContiMessage.hasAppVersion = YES;
-  resultContiMessage.appVersion = value;
-  return self;
+    resultContiMessage.hasAppVersion = YES;
+    resultContiMessage.appVersion = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearAppVersion {
-  resultContiMessage.hasAppVersion = NO;
-  resultContiMessage.appVersion = @"";
-  return self;
+    resultContiMessage.hasAppVersion = NO;
+    resultContiMessage.appVersion = @"";
+    return self;
 }
 - (BOOL) hasTimeStamp {
-  return resultContiMessage.hasTimeStamp;
+    return resultContiMessage.hasTimeStamp;
 }
 - (NSString*) timeStamp {
-  return resultContiMessage.timeStamp;
+    return resultContiMessage.timeStamp;
 }
 - (ContiMessageBuilder*) setTimeStamp:(NSString*) value {
-  resultContiMessage.hasTimeStamp = YES;
-  resultContiMessage.timeStamp = value;
-  return self;
+    resultContiMessage.hasTimeStamp = YES;
+    resultContiMessage.timeStamp = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearTimeStamp {
-  resultContiMessage.hasTimeStamp = NO;
-  resultContiMessage.timeStamp = @"";
-  return self;
+    resultContiMessage.hasTimeStamp = NO;
+    resultContiMessage.timeStamp = @"";
+    return self;
 }
 - (BOOL) hasToken {
-  return resultContiMessage.hasToken;
+    return resultContiMessage.hasToken;
 }
 - (NSString*) token {
-  return resultContiMessage.token;
+    return resultContiMessage.token;
 }
 - (ContiMessageBuilder*) setToken:(NSString*) value {
-  resultContiMessage.hasToken = YES;
-  resultContiMessage.token = value;
-  return self;
+    resultContiMessage.hasToken = YES;
+    resultContiMessage.token = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearToken {
-  resultContiMessage.hasToken = NO;
-  resultContiMessage.token = @"";
-  return self;
+    resultContiMessage.hasToken = NO;
+    resultContiMessage.token = @"";
+    return self;
+}
+- (BOOL) hasData {
+    return resultContiMessage.hasData;
+}
+- (NSString*) getData {
+    return resultContiMessage.data;
+}
+- (ContiMessageBuilder*) setData:(NSString*) value {
+    resultContiMessage.hasData = YES;
+    resultContiMessage.data = value;
+    return self;
+}
+- (ContiMessageBuilder*) clearData {
+    resultContiMessage.hasData = NO;
+    resultContiMessage.data = @"";
+    return self;
 }
 - (BOOL) hasPkgId {
-  return resultContiMessage.hasPkgId;
+    return resultContiMessage.hasPkgId;
 }
 - (NSString*) pkgId {
-  return resultContiMessage.pkgId;
+    return resultContiMessage.pkgId;
 }
 - (ContiMessageBuilder*) setPkgId:(NSString*) value {
-  resultContiMessage.hasPkgId = YES;
-  resultContiMessage.pkgId = value;
-  return self;
+    resultContiMessage.hasPkgId = YES;
+    resultContiMessage.pkgId = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearPkgId {
-  resultContiMessage.hasPkgId = NO;
-  resultContiMessage.pkgId = @"";
-  return self;
+    resultContiMessage.hasPkgId = NO;
+    resultContiMessage.pkgId = @"";
+    return self;
 }
 - (BOOL) hasPkgIndex {
-  return resultContiMessage.hasPkgIndex;
+    return resultContiMessage.hasPkgIndex;
 }
 - (SInt32) pkgIndex {
-  return resultContiMessage.pkgIndex;
+    return resultContiMessage.pkgIndex;
 }
 - (ContiMessageBuilder*) setPkgIndex:(SInt32) value {
-  resultContiMessage.hasPkgIndex = YES;
-  resultContiMessage.pkgIndex = value;
-  return self;
+    resultContiMessage.hasPkgIndex = YES;
+    resultContiMessage.pkgIndex = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearPkgIndex {
-  resultContiMessage.hasPkgIndex = NO;
-  resultContiMessage.pkgIndex = 0;
-  return self;
+    resultContiMessage.hasPkgIndex = NO;
+    resultContiMessage.pkgIndex = 0;
+    return self;
 }
 - (BOOL) hasPkgNum {
-  return resultContiMessage.hasPkgNum;
+    return resultContiMessage.hasPkgNum;
 }
 - (SInt32) pkgNum {
-  return resultContiMessage.pkgNum;
+    return resultContiMessage.pkgNum;
 }
 - (ContiMessageBuilder*) setPkgNum:(SInt32) value {
-  resultContiMessage.hasPkgNum = YES;
-  resultContiMessage.pkgNum = value;
-  return self;
+    resultContiMessage.hasPkgNum = YES;
+    resultContiMessage.pkgNum = value;
+    return self;
 }
 - (ContiMessageBuilder*) clearPkgNum {
-  resultContiMessage.hasPkgNum = NO;
-  resultContiMessage.pkgNum = 0;
-  return self;
+    resultContiMessage.hasPkgNum = NO;
+    resultContiMessage.pkgNum = 0;
+    return self;
 }
-- (BOOL) hasIsencryption {
-  return resultContiMessage.hasIsencryption;
+- (BOOL) hasIsEncryption {
+    return resultContiMessage.hasIsEncryption;
 }
-- (SInt32) isencryption {
-  return resultContiMessage.isencryption;
+- (SInt32) isEncryption {
+    return resultContiMessage.isEncryption;
 }
-- (ContiMessageBuilder*) setIsencryption:(SInt32) value {
-  resultContiMessage.hasIsencryption = YES;
-  resultContiMessage.isencryption = value;
-  return self;
+- (ContiMessageBuilder*) setIsEncryption:(SInt32) value {
+    resultContiMessage.hasIsEncryption = YES;
+    resultContiMessage.isEncryption = value;
+    return self;
 }
-- (ContiMessageBuilder*) clearIsencryption {
-  resultContiMessage.hasIsencryption = NO;
-  resultContiMessage.isencryption = 0;
-  return self;
+- (ContiMessageBuilder*) clearIsEncryption {
+    resultContiMessage.hasIsEncryption = NO;
+    resultContiMessage.isEncryption = 0;
+    return self;
 }
-- (BOOL) hasIscompress {
-  return resultContiMessage.hasIscompress;
+- (BOOL) hasIsCompress {
+    return resultContiMessage.hasIsCompress;
 }
-- (SInt32) iscompress {
-  return resultContiMessage.iscompress;
+- (SInt32) isCompress {
+    return resultContiMessage.isCompress;
 }
-- (ContiMessageBuilder*) setIscompress:(SInt32) value {
-  resultContiMessage.hasIscompress = YES;
-  resultContiMessage.iscompress = value;
-  return self;
+- (ContiMessageBuilder*) setIsCompress:(SInt32) value {
+    resultContiMessage.hasIsCompress = YES;
+    resultContiMessage.isCompress = value;
+    return self;
 }
-- (ContiMessageBuilder*) clearIscompress {
-  resultContiMessage.hasIscompress = NO;
-  resultContiMessage.iscompress = 0;
-  return self;
-}
-- (BOOL) hasDataStr {
-  return resultContiMessage.hasDataStr;
-}
-- (NSString*) dataStr {
-  return resultContiMessage.dataStr;
-}
-- (ContiMessageBuilder*) setDataStr:(NSString*) value {
-  resultContiMessage.hasDataStr = YES;
-  resultContiMessage.dataStr = value;
-  return self;
-}
-- (ContiMessageBuilder*) clearDataStr {
-  resultContiMessage.hasDataStr = NO;
-  resultContiMessage.dataStr = @"";
-  return self;
+- (ContiMessageBuilder*) clearIsCompress {
+    resultContiMessage.hasIsCompress = NO;
+    resultContiMessage.isCompress = 0;
+    return self;
 }
 @end
 

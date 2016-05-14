@@ -52,11 +52,11 @@
     _pkgNumUITextField.text = @"1";
     _pkgNumUITextField.keyboardType = UIKeyboardTypeNumberPad;
     
-    _isEncryptionSwitch.on = NO;
+    _isEncryptionSwitch.on = YES;
     
-    _isCompressSwitch.on = NO;
+    _isCompressSwitch.on = YES;
     
-    _isProtocolBufferSwitch.on = NO;
+    _isProtocolBufferSwitch.on = YES;
 }
 
 - (IBAction)doLogon:(UIButton *)sender {
@@ -68,7 +68,7 @@
     NSString *pkgNum = [_pkgNumUITextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSString *isEncryption = _isEncryptionSwitch.on?@"1":@"0";
     NSString *isCompress = _isCompressSwitch.on?@"1":@"0";
-    NSString *isProtocolBuffer = _isProtocolBufferSwitch.on?@"1":@"0";
+    BOOL isProtocolBuffer = _isProtocolBufferSwitch.on;
     
     if (username.length == 0 || password.length ==0 || [pkgNum integerValue]<=0) {
         _tipLabel.textColor = [UIColor redColor];
@@ -84,33 +84,144 @@
     [dict setObject:isEncryption forKey:kIsEncryption];
     [dict setObject:isCompress forKey:kIsCompress];
     [dict setObject:data forKey:kData];
-
+    
     if (!isProtocolBuffer) {
-
+        
         [HttpClient POST:kServer parameters:dict finish:^(id responseObject) {
             _tipLabel.text = [responseObject description];
             NSLog(@"responseObject=%@", responseObject);
         }];
     } else {
-
+        
         // generate commom message
         NSString *payLoadJson = [Payload generateCommomMsgWithFunid:@"Logon" pkgNum:pkgNum isEncryption:isEncryption isCompress:isCompress data:data];
         // commom message to dictionary
         NSDictionary *payLoadDict = [payLoadJson objectFromJSONString];
+        //        // post data
+        //        NSData *data = [ProtoBufManager dictionaryToData:payLoadDict];
         
-        AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
-        manager.responseSerializer = [AFJSONResponseSerializer serializer];
         
-        [manager POST:kServer2 parameters:[ProtoBufManager dictionaryToData:payLoadDict] success:^(NSURLSessionDataTask *task, id responseObject) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                _tipLabel.text = [responseObject description];
-            });
-            NSLog(@"response:%@", responseObject);
-        } failure:^(NSURLSessionDataTask *task, NSError *error) {
-            NSLog(@"error:%@", error);
-        }];
+        
+        
+        NSInteger iPkgNum = [pkgNum intValue];
+        
+        // for package
+        NSString *allData = payLoadDict[kData];
+        NSUInteger pkgLength = allData.length/iPkgNum;
+        
+        // http parameters Array
+        NSMutableArray *parametersArray = [NSMutableArray array];
+        // package
+        for (int idx=0; idx<iPkgNum; idx++) {
+            
+            NSString *pkgIndex = [NSString stringWithFormat:@"%d", idx];
+            NSString *pkgData = @"";
+            if (idx != (iPkgNum-1)) {
+                pkgData = [allData substringWithRange:NSMakeRange(idx*pkgLength, pkgLength)];
+            } else {
+                pkgData = [allData substringFromIndex:(idx*pkgLength)];
+            }
+            
+            NSMutableDictionary *paramterDict = [NSMutableDictionary dictionaryWithDictionary:payLoadDict];
+            [paramterDict setObject:pkgIndex forKey:kPkgIndex];
+            [paramterDict setObject:pkgData forKey:kData];
+            
+            [parametersArray addObject:paramterDict];
+        }
+        [self post:parametersArray];
+        
+        
+        
+        
+        //        NSString *urlString = [kServer2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        //        NSURL *url = [NSURL URLWithString:urlString];
+        //
+        //        NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+        //        [request setHTTPMethod:@"POST"];
+        //        [request setHTTPBody:data];
+        //
+        //        [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        //            if (connectionError) {
+        //                dispatch_async(dispatch_get_main_queue(), ^{
+        //                    _tipLabel.text = [connectionError description];
+        //                });
+        //            } else {
+        //                NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        //                NSDictionary *responseDictionary = [result objectFromJSONString];
+        //                NSLog(@"response:%@", responseDictionary);
+        //                dispatch_async(dispatch_get_main_queue(), ^{
+        //                    _tipLabel.text = [responseDictionary description];
+        //                });
+        //            }
+        //        }];
     }
+}
+
+- (void)post:(NSArray *)parameters {
+    
+    
+    // http parameters Array
+    NSMutableArray *array = [NSMutableArray arrayWithArray:parameters];
+    
+    NSDictionary *parametersDictionary = (NSDictionary *)[array firstObject];
+    NSLog(@"parameters:%@", parametersDictionary);
+    
+    
+    // post data
+    NSData *data = [ProtoBufManager dictionaryToData:parametersDictionary];
+    
+    NSString *urlString = [kServer2 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+    
+    [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError) {
+            
+            
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                _tipLabel.text = [connectionError description];
+            });
+        } else {
+            NSString *result = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+            NSDictionary *responseDictionary = [result objectFromJSONString];
+            NSLog(@"response:%@", responseDictionary);
+            
+            
+            
+            
+            
+            // http success
+            if ([responseDictionary[kErrorCode] intValue] == 0) {
+                
+                NSDictionary *dataDictionary = (NSDictionary *)responseDictionary[kData];
+                if ([dataDictionary allKeys].count > 0) { // all request end
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        _tipLabel.text = [responseDictionary description];
+                    });
+                } else {
+                    
+                    // not all request end
+                    [array removeObjectAtIndex:0];
+                    [self post:array];
+                }
+            } else {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    _tipLabel.text = [responseDictionary description];
+                });
+            }
+            
+            
+            
+            
+            
+        }
+    }];
+    
 }
 
 // 点击屏幕任何地方,收起键盘

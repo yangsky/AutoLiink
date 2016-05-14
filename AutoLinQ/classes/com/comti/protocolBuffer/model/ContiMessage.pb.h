@@ -15,59 +15,44 @@
 + (void) registerAllExtensions:(PBMutableExtensionRegistry*) registry;
 @end
 
-//#define ContiMessage_appID @"appId"
-//#define ContiMessage_categoryID @"categoryId"
-//#define ContiMessage_funcID @"funcId"
-//#define ContiMessage_appVersion @"appVersion"
-//#define ContiMessage_timeStamp @"timeStamp"
-//#define ContiMessage_token @"token"
-//#define ContiMessage_pkgID @"pkgId"
-//#define ContiMessage_pkgIndex @"pkgIndex"
-//#define ContiMessage_pkgNum @"pkgNum"
-//#define ContiMessage_isencryption @"isencryption"
-//#define ContiMessage_iscompress @"iscompress"
-//#define ContiMessage_dataStr @"dataStr"
-
-#define ContiMessage_appID @"AppID"
-#define ContiMessage_categoryID @"CategoryID"
-#define ContiMessage_funcID @"FuncID"
-#define ContiMessage_appVersion @"AppVersion"
-#define ContiMessage_timeStamp @"TimeStamp"
-#define ContiMessage_token @"Token"
-#define ContiMessage_pkgID @"PkgID"
-#define ContiMessage_pkgIndex @"PkgIndex"
-#define ContiMessage_pkgNum @"PkgNum"
-#define ContiMessage_isencryption @"IsEncryption"
-#define ContiMessage_iscompress @"IsCompress"
-#define ContiMessage_dataStr @"Data"
-
-
+#define ContiMessage_appID @"appId"
+#define ContiMessage_categoryID @"categoryId"
+#define ContiMessage_funcID @"funcId"
+#define ContiMessage_appVersion @"appVersion"
+#define ContiMessage_timeStamp @"timeStamp"
+#define ContiMessage_token @"token"
+#define ContiMessage_data @"data"
+#define ContiMessage_pkgID @"pkgId"
+#define ContiMessage_pkgIndex @"pkgIndex"
+#define ContiMessage_pkgNum @"pkgNum"
+#define ContiMessage_isEncryption @"isEncryption"
+#define ContiMessage_isCompress @"isCompress"
 @interface ContiMessage : PBGeneratedMessage<GeneratedMessageProtocol> {
 @private
-  BOOL hasPkgIndex_:1;
-  BOOL hasPkgNum_:1;
-  BOOL hasIsencryption_:1;
-  BOOL hasIscompress_:1;
-  BOOL hasAppId_:1;
-  BOOL hasCategoryId_:1;
-  BOOL hasFuncId_:1;
-  BOOL hasAppVersion_:1;
-  BOOL hasTimeStamp_:1;
-  BOOL hasToken_:1;
-  BOOL hasPkgId_:1;
-  BOOL hasDataStr_:1;
-  SInt32 pkgIndex;
-  SInt32 pkgNum;
-  SInt32 isencryption;
-  SInt32 iscompress;
-  NSString* appId;
-  NSString* categoryId;
-  NSString* funcId;
-  NSString* appVersion;
-  NSString* timeStamp;
-  NSString* token;
-  NSString* pkgId;
-  NSString* dataStr;
+    BOOL hasPkgIndex_:1;
+    BOOL hasPkgNum_:1;
+    BOOL hasIsEncryption_:1;
+    BOOL hasIsCompress_:1;
+    BOOL hasAppId_:1;
+    BOOL hasCategoryId_:1;
+    BOOL hasFuncId_:1;
+    BOOL hasAppVersion_:1;
+    BOOL hasTimeStamp_:1;
+    BOOL hasToken_:1;
+    BOOL hasData_:1;
+    BOOL hasPkgId_:1;
+    SInt32 pkgIndex;
+    SInt32 pkgNum;
+    SInt32 isEncryption;
+    SInt32 isCompress;
+    NSString* appId;
+    NSString* categoryId;
+    NSString* funcId;
+    NSString* appVersion;
+    NSString* timeStamp;
+    NSString* token;
+    NSString* data;
+    NSString* pkgId;
 }
 - (BOOL) hasAppId;
 - (BOOL) hasCategoryId;
@@ -75,24 +60,24 @@
 - (BOOL) hasAppVersion;
 - (BOOL) hasTimeStamp;
 - (BOOL) hasToken;
+- (BOOL) hasData;
 - (BOOL) hasPkgId;
 - (BOOL) hasPkgIndex;
 - (BOOL) hasPkgNum;
-- (BOOL) hasIsencryption;
-- (BOOL) hasIscompress;
-- (BOOL) hasDataStr;
+- (BOOL) hasIsEncryption;
+- (BOOL) hasIsCompress;
 @property (readonly, strong) NSString* appId;
 @property (readonly, strong) NSString* categoryId;
 @property (readonly, strong) NSString* funcId;
 @property (readonly, strong) NSString* appVersion;
 @property (readonly, strong) NSString* timeStamp;
 @property (readonly, strong) NSString* token;
+@property (readonly, strong, getter=getData) NSString* data;
 @property (readonly, strong) NSString* pkgId;
 @property (readonly) SInt32 pkgIndex;
 @property (readonly) SInt32 pkgNum;
-@property (readonly) SInt32 isencryption;
-@property (readonly) SInt32 iscompress;
-@property (readonly, strong) NSString* dataStr;
+@property (readonly) SInt32 isEncryption;
+@property (readonly) SInt32 isCompress;
 
 + (instancetype) defaultInstance;
 - (instancetype) defaultInstance;
@@ -114,7 +99,7 @@
 
 @interface ContiMessageBuilder : PBGeneratedMessageBuilder {
 @private
-  ContiMessage* resultContiMessage;
+    ContiMessage* resultContiMessage;
 }
 
 - (ContiMessage*) defaultInstance;
@@ -159,6 +144,11 @@
 - (ContiMessageBuilder*) setToken:(NSString*) value;
 - (ContiMessageBuilder*) clearToken;
 
+- (BOOL) hasData;
+- (NSString*) getData;
+- (ContiMessageBuilder*) setData:(NSString*) value;
+- (ContiMessageBuilder*) clearData;
+
 - (BOOL) hasPkgId;
 - (NSString*) pkgId;
 - (ContiMessageBuilder*) setPkgId:(NSString*) value;
@@ -174,20 +164,15 @@
 - (ContiMessageBuilder*) setPkgNum:(SInt32) value;
 - (ContiMessageBuilder*) clearPkgNum;
 
-- (BOOL) hasIsencryption;
-- (SInt32) isencryption;
-- (ContiMessageBuilder*) setIsencryption:(SInt32) value;
-- (ContiMessageBuilder*) clearIsencryption;
+- (BOOL) hasIsEncryption;
+- (SInt32) isEncryption;
+- (ContiMessageBuilder*) setIsEncryption:(SInt32) value;
+- (ContiMessageBuilder*) clearIsEncryption;
 
-- (BOOL) hasIscompress;
-- (SInt32) iscompress;
-- (ContiMessageBuilder*) setIscompress:(SInt32) value;
-- (ContiMessageBuilder*) clearIscompress;
-
-- (BOOL) hasDataStr;
-- (NSString*) dataStr;
-- (ContiMessageBuilder*) setDataStr:(NSString*) value;
-- (ContiMessageBuilder*) clearDataStr;
+- (BOOL) hasIsCompress;
+- (SInt32) isCompress;
+- (ContiMessageBuilder*) setIsCompress:(SInt32) value;
+- (ContiMessageBuilder*) clearIsCompress;
 @end
 
 
